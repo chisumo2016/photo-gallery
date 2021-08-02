@@ -22,4 +22,4 @@ class Database {
 }
 
 $database = new Database();
-$database ->open_db_connection();
+//$database ->open_db_connection();
