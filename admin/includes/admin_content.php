@@ -10,11 +10,9 @@
 
             <?php
 
-                   $result_set = User::find_all_users();
+                   $found_user = User::find_user_by_id(2);
+                  echo  $found_user['username'];
 
-                   while($row = mysqli_fetch_array($result_set)){
-                       echo $row['username'] . "<br>";
-                   }
             ?>
             <ol class="breadcrumb">
                 <li>
