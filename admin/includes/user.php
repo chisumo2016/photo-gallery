@@ -37,7 +37,7 @@ Class User {
         return $result_set ;
     }
 
-    public  static function instantantion()
+    public  static function instantantion($found_user)
     {
         $the_object = new self;
         $the_object->id           = $found_user['id'];

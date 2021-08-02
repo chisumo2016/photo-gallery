@@ -85,7 +85,7 @@ Assigning Array Values to Object Properties
 Auto Instantiation Method
  - we need to make the above code better
  -create a method in user class
-    public  static function instantantion()
+    private  static function instantantion($found_user)
         {
             $the_object = new self;
             $the_object->id           = $found_user['id'];
@@ -96,3 +96,28 @@ Auto Instantiation Method
 
             return $the_object;
         }
+NB:what if we have 100 fields in database ? we shoudl use the loop
+
+Testing the Instantiation Method
+
+ <?php
+    $found_user = User::find_user_by_id(3);
+
+    $user =User::instantantion($found_user );
+
+    echo $user->last_name;
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
