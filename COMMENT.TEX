@@ -103,16 +103,25 @@ Testing the Instantiation Method
  <?php
     $found_user = User::find_user_by_id(3);
 
-    $user =User::instantantion($found_user );
-
+    $user = User::instantantion($found_user );
     echo $user->last_name;
 
 ?>
 
+ Short Way Auto Instantiation
+ -The short way using the array  if you have many attributes
+ -we are getting the associative arrays
+  public  static function instantantion($the_record)
+      {
+          $the_object = new self;
 
-
-
-
+          foreach ($the_record as  $the_attaribute => $value) {
+              if ($the_object->has_the_attribute($the_attaribute)){
+                  $the_object->the_attribute = $value;
+              }
+          }
+          return $the_object;
+      }
 
 
 
