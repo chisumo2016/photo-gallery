@@ -80,5 +80,19 @@ Assigning Array Values to Object Properties
              $user->password     = $found_user['password'];
              $user->first_name   = $found_user['first_name'];
              $user->last_name    = $found_user['last_name'];
-
              echo $user->id;
+
+Auto Instantiation Method
+ - we need to make the above code better
+ -create a method in user class
+    public  static function instantantion()
+        {
+            $the_object = new self;
+            $the_object->id           = $found_user['id'];
+            $the_object->username     = $found_user['username'];
+            $the_object->password     = $found_user['password'];
+            $the_object->first_name   = $found_user['first_name'];
+            $the_object->last_name    = $found_user['last_name'];
+
+            return $the_object;
+        }
