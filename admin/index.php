@@ -11,12 +11,10 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
-
+    <div id="page-wrapper">
         <?php include("includes/admin_content.php");?>
             <!-- /.container-fluid -->
-
-        </div>
+    </div>
         <!-- /#page-wrapper -->
 
   <?php include("includes/footer.php"); ?>
