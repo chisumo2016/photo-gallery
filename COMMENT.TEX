@@ -62,4 +62,23 @@ Creating a Find user id method and Solution
       echo $found_user['username'];
 
 Create This Query Method
+ public  static  function  find_this_query($sql)
+    {
+        global $database;
+        $result_set = $database->query($sql);
+        return $result_set ;
+    }
 
+Assigning Array Values to Object Properties
+ - to return an object like $user->username ; instead of an array found_user['password'];
+        <?php
+            $found_user = User::find_user_by_id(3);
+
+             $user = new User();
+             $user->id           = $found_user['id'];
+             $user->username     = $found_user['username'];
+             $user->password     = $found_user['password'];
+             $user->first_name   = $found_user['first_name'];
+             $user->last_name    = $found_user['last_name'];
+
+             echo $user->id;

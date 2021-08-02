@@ -1,6 +1,12 @@
 <?php
 
 Class User {
+    //properties
+    public $id;
+    public $password;
+    public $username;
+    public $first_name;
+    public $last_name;
 
     public static  function  find_all_users()
     {
@@ -28,9 +34,7 @@ Class User {
     {
         global $database;
         $result_set = $database->query($sql);
-
         return $result_set ;
-
     }
 
 }
