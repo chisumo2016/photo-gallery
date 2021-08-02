@@ -20,7 +20,7 @@ Database Class Helper Methods
 Testing Query Meth
 Improving our Connection to be more OOP
 
-USER CLASS
+USER CLASS   C R U D
     Adding Users
     Displaying Users
     Updating Users
@@ -46,3 +46,13 @@ Testing our find_all method
            echo $row['username'] . "<br>";
        }
     ?>
+- This code is not much better  bse we have to instantiate   the objet .The better way
+  is to use static
+
+Static Method Usage and Challenge
+
+   $result_set = User::find_all_users();
+
+     while($row = mysqli_fetch_array($result_set)){
+         echo $row['username'] . "<br>";
+     }
