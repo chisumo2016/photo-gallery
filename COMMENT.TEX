@@ -124,9 +124,13 @@ Testing the Instantiation Method
       }
 
 
-
-
-
+ Creating The Attribute Finder Method
+   private  function  has_the_attribute($the_attribute)
+       {
+          $object_properties = get_object_vars($this);
+          //if the key exist
+          return  array_key_exists($the_attribute, $object_properties);
+       }
 
 
 

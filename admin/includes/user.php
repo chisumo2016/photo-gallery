@@ -41,12 +41,19 @@ Class User {
     {
         $the_object = new self;
 
-        foreach ($the_record as  $the_attaribute => $value) {
-            if ($the_object->has_the_attribute($the_attaribute)){
+        foreach ($the_record as  $the_attribute => $value) {
+            if ($the_object->has_the_attribute($the_attribute)){
                 $the_object->the_attribute = $value;
             }
         }
         return $the_object;
+    }
+
+    private  function  has_the_attribute($the_attribute)
+    {
+       $object_properties = get_object_vars($this);
+       //if the key exist
+       return  array_key_exists($the_attribute, $object_properties);
     }
 
 }
