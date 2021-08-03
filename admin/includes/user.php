@@ -34,7 +34,13 @@ Class User {
     {
         global $database;
         $result_set = $database->query($sql);
-        return $result_set ;
+
+        $the_object_array = [];
+
+        while($row = mysqli_fetch_array($result_set )){
+            $the_object_array[] = self::instantantion($row);
+        }
+        return $the_object_array ;
     }
 
     public  static function instantantion($the_record)
