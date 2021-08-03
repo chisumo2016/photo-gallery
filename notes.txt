@@ -34,8 +34,11 @@ Controlling Access to Admin
 Creating The Login Page
  -creating the login page
  -Add the initializer file
+ -write a  functionality to login in the loging page
 
-
+Creating the Verify Method Part 1
+-creating the verify_user()
+-Write the function in user class verify_user()
 
 
 

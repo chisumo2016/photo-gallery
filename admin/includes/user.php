@@ -63,4 +63,12 @@ Class User {
        return  array_key_exists($the_attribute, $object_properties);
     }
 
+    public  static  function  verify_user()
+    {
+        global $database;
+        $username = $database->escape_string($username);
+        $password = $database->escape_string($password);
+
+    }
+
 }
