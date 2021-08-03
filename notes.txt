@@ -1,0 +1,11 @@
+SESSION CLASS
+    login in
+    Login out
+    Controlling Admin Acess
+    Validating
+    Keep Track Of views
+
+Starting Session
+ -Create a session file
+ -Change from require() to require_once() in init and header
+ -Session must be available when the user in log in
