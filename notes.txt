@@ -9,3 +9,6 @@ Starting Session
  -Create a session file
  -Change from require() to require_once() in init and header
  -Session must be available when the user in log in
+
+ The Checking login Method
+ -create a method inside session
