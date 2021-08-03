@@ -21,5 +21,22 @@ The Login Method
    is_signed_in() will return true or false
 -Build a function  login()
 
+ The Logout Method
+- create a method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
