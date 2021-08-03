@@ -12,6 +12,7 @@
                $found_user = User::find_user_by_id(3);
                echo $found_user->username;
 
+
             ?>
             <ol class="breadcrumb">
                 <li>
