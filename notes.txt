@@ -11,4 +11,15 @@ Starting Session
  -Session must be available when the user in log in
 
  The Checking login Method
- -create a method inside session
+ -create a method inside session class
+ - Call check_the_login()
+
+The Login Method
+-in session  set to false  $signed_in = false;
+-Call the check_the_login() in the constructor when the application start
+-Build the getter function to get the private value
+   is_signed_in() will return true or false
+-Build a function  login()
+
+
+
