@@ -23,10 +23,9 @@ Class User {
         global $database;
        // $result_set = $database->query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
 
-        $result_set =  self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
-        $found_user = mysqli_fetch_array($result_set);
-        return $found_user;
+        $the_result_array =  self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
 
+        return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
     }
 
@@ -48,7 +47,9 @@ Class User {
         $the_object = new self;
 
         foreach ($the_record as  $the_attribute => $value) {
+
             if ($the_object->has_the_attribute($the_attribute)){
+                //assign the property a value
                 $the_object->$the_attribute = $value;
             }
         }

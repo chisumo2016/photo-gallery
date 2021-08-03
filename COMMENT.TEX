@@ -138,11 +138,42 @@ Adding our Instantiation Method
 -Modified the query method in user class find_this_query($sql)
 
 Using our Instantiation Method to find all users
--Display the information without using while loop
+-Display the information without using while loop  find_all_users()
      <?php
-                 $users = User::find_all_users();
-                 foreach ($users as $user){
-                     echo $user->username . "<br>";
-                 }
-
+         $users = User::find_all_users();
+         foreach ($users as $user){
+             echo $user->username . "<br>";
+         }
     ?>
+
+8. Using our Instantiation Method to find 1 User
+  -find user by id
+  -modified the find_user_by_id($user_id) functionality
+      public static  function find_user_by_id($user_id)
+          {
+              global $database;
+             // $result_set = $database->query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
+
+              $the_result_array =  self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
+
+              return !empty($the_result_array) ? array_shift($the_result_array) : false;
+
+              or
+             /* //$found_user = mysqli_fetch_array($result_set);
+              if (!empty($the_result_array)){
+                $first_item =  array_shift($the_result_array);
+                return  $first_item;
+              }else{
+                  return false;
+              }
+              return $found_user;*/
+
+
+          }
+
+- test find user
+   <?php
+      $found_user = User::find_user_by_id(3);
+      echo $found_user->username;
+
+   ?>
