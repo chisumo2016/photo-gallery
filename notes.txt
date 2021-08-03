@@ -41,7 +41,11 @@ Creating the Verify Method Part 1
 -Write the function in user class verify_user()
 
  Creating the Verify Method part 2
+- fimishinh the last part
+-
 
+Login page position
+-move login page into admin
 
 
 
