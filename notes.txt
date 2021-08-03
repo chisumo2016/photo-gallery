@@ -40,6 +40,9 @@ Creating the Verify Method Part 1
 -creating the verify_user()
 -Write the function in user class verify_user()
 
+ Creating the Verify Method part 2
+
+
 
 
 
