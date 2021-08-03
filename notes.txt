@@ -28,9 +28,12 @@ Controlling Access to Admin
 - Header is where we include to our application
 -Best place to start writing our code
 -Header is_signed_in()
--Create a customs functions in the functin.php
+-Create a customs functions in the function.php
+-Apply to header file
 
-
+Creating The Login Page
+ -creating the login page
+ -Add the initializer file
 
 
 
