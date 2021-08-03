@@ -12,7 +12,7 @@ function classAutoloadear($class)
 
  spl_autoload_register('classAutoloadear');
 
-function redirec($location){
+function redirect($location){
     header("Location: {$location}");
 }
 

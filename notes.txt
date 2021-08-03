@@ -22,10 +22,13 @@ The Login Method
 -Build a function  login()
 
  The Logout Method
-- create a method
+- create a method logout
 
-
-
+Controlling Access to Admin
+- Header is where we include to our application
+-Best place to start writing our code
+-Header is_signed_in()
+-Create a customs functions in the functin.php
 
 
 
