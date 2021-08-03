@@ -136,3 +136,13 @@ Adding our Instantiation Method
 -we gonna make the use of the Instantiation method in user class
 - To get the use object instead of while loop
 -Modified the query method in user class find_this_query($sql)
+
+Using our Instantiation Method to find all users
+-Display the information without using while loop
+     <?php
+                 $users = User::find_all_users();
+                 foreach ($users as $user){
+                     echo $user->username . "<br>";
+                 }
+
+    ?>
