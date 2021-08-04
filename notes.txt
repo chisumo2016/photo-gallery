@@ -47,6 +47,11 @@ Creating the Verify Method Part 1
 Login page position
 -move login page into admin
 
+Login Form Creation / Download
+-attached the login form
+-Move login form to the admin from include
+-Attached the <?php if (!$session->is_signed_in()){redirect("login.php");} ?>  header file
+-Atached header file to login page
 
 
 

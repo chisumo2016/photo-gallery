@@ -1,4 +1,4 @@
-<?php require_once("init.php");?>
+<?php require_once("includes/header.php");?>
 <?php
   if ($session->is_signed_in()){
       redirect('index.php');
@@ -21,3 +21,34 @@ if (isset($_POST['submit'])){
     $username ="";
     $password ="";
 }
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div class="col-md-4 col-md-offset-3">
+       <form action="">
+          <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text"  name="username" class="form-control">
+          </div>
+           <div class="form-group">
+               <label for="username">Username</label>
+               <input type="password"  name="username" class="form-control">
+           </div>
+
+           <div class="form-group">
+               <input type="submit" name="submit" value="submit" class="btn btn-primary">
+           </div>
+       </form>
+   </div>
+
+</body>
+</html>
