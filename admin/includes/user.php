@@ -97,12 +97,8 @@ Class User {
             $this->id = $database->the_insert_id();
 
             return true;
-        }else{
-            return false;
-
         }
 
-
+        return false;
     }
-
 }

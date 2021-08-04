@@ -6,3 +6,8 @@ Update Method
 Testing
 
  Create Method Query Part1  -USER CLASS
+ -create a  method to create a user in user class
+ -
+
+ Inserting Last ID Method (Challenge)
+ -add the the_insert_id() in the database connection
