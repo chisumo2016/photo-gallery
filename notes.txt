@@ -51,12 +51,13 @@ Login Form Creation / Download
 -attached the login form
 -Move login form to the admin from include
 -Attached the <?php if (!$session->is_signed_in()){redirect("login.php");} ?>  header file
--Atached header file to login page
+-Attached header file to login page
 
 
-
-
-
+ Creating our Login out Feature
+-login to the system
+-Log out functionality
+-login page
 
 
 

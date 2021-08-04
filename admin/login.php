@@ -34,14 +34,14 @@ if (isset($_POST['submit'])){
 </head>
 <body>
    <div class="col-md-4 col-md-offset-3">
-       <form action="">
+       <form action="" method="post">
           <div class="form-group">
               <label for="username">Username</label>
               <input type="text"  name="username" class="form-control">
           </div>
            <div class="form-group">
-               <label for="username">Username</label>
-               <input type="password"  name="username" class="form-control">
+               <label for="username">Password</label>
+               <input type="password"  name="password" class="form-control">
            </div>
 
            <div class="form-group">
