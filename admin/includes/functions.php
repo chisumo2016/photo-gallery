@@ -1,6 +1,6 @@
 <?php
 
-function classAutoloadear($class)
+function classAutoloader($class)
  {
      $class = strtolower($class);
 
@@ -10,7 +10,7 @@ function classAutoloadear($class)
      }
  }
 
- spl_autoload_register('classAutoloadear');
+ spl_autoload_register('classAutoloader');
 
 function redirect($location){
     header("Location: {$location}");

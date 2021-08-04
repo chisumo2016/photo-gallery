@@ -1,0 +1,56 @@
+FILE BASICS
+File Permission
+  When you launch a website or CMS to the web
+    -Create a folder for your upload files
+    -Create permissions for extra security
+    -Grant only a few permissions to the get the job done
+
+                USER    GROUP   OTHER
+ Read (r)       YES      YES    YES
+ Write(w)       YES      YES    NO
+Execute(x)      YES      NO     NO
+
+                rwx       rw    r--
+
+sudo    run as super user
+chmod   change permissions
+chown   change owner
+
+MAGIC CONSTANTS
+Location of files
+echo __FILE__ . "<br>";
+echo __LINE__ . "<br>";
+echo __DIR__ . "<br>";
+
+if(file_exist(__DIR__))
+{
+  echo "tes"
+}
+if(file_exist(__FILE__)){
+  echo "tes"
+}
+
+if(IS_FILE(__FILE__)){
+  echo "tes";
+}ELSE{
+   echo "NO";
+}
+
+
+if(is_dir(__FILE__)){
+  echo "tes";
+}else{
+   echo "NO";
+}
+
+TENARY OPERATOR
+
+echo file_exist(__FILE__) ? "yes" : "no"
+
+
+
+
+
+
+
+

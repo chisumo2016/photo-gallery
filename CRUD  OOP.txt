@@ -1,0 +1,8 @@
+THE CRUD
+Create Method
+Delete Method
+Read   Method
+Update Method
+Testing
+
+ Create Method Query Part1  -USER CLASS

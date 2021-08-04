@@ -1,0 +1,57 @@
+FILE UPLOAD
+ Upload files
+ PHP File Errors
+ Php.ini configuration
+ Moving uploaded Files
+ Analyizing Upload File Structure
+
+ Configuring PHP for File Uploads
+ -php.ini is the big file in the server
+    file_upload             True
+    post_ma_size            8M  /128
+    Upload_max_file_size    2M
+    memory_limit            128M
+    Max_input_time          -1 -NO LIMIT
+    Upload_tmp_dir          NULL
+    Max_execution_time      30 seconds
+
+
+Sending Files
+-as form data
+
+Analyzing Uploaded File Structure
+  UPLOADED FILE STRUCTURES
+  Super Global - $_FILES['example_file']
+
+  Keys in the associative array
+     Name               file name
+     Type               jpg, png,gif,doc,txt
+     Size               in btyes
+     tmp_name           temporary name
+     error              the error code  -for debugging
+
+EXAmple  -$Size = $_FILES['example_file']['size'];
+
+File Error Code Explained
+https://www.php.net/manual/en/features.file-upload.errors.php
+UPLOAD_ERR_OK
+UPLOAD_ERR_INI_SIZE
+UPLOAD_ERR_FORM_SIZE
+UPLOAD_ERR_PARTIAL
+UPLOAD_ERR_NO_FILE
+UPLOAD_ERR_NO_TMP_DIR
+UPLOAD_ERR_CANT_WRITE
+UPLOAD_ERR_EXTENSION
+
+
+
+Moving Uploaded Files
+-One from the page
+-Ome from temporay to the sever
+
+
+
+
+
+
+

@@ -1,10 +1,11 @@
 <?php
 
+// Starting the session
   class Session
   {
       private  $signed_in = false;
-      public   $user_id;
-      public  $message;
+      public   $user_id; //id
+      public   $message;
 
       function  __construct(){
           session_start();
@@ -14,7 +15,7 @@
 
       private  function check_the_login()
       {
-          if (isset($_session['user_id'])){
+          if (isset($_SESSION['user_id'])){
               $this->user_id = $_SESSION['user_id'];
               $this->signed_in = true;
               //we dont find
@@ -29,10 +30,11 @@
           return $this->signed_in;
       }
 
+      //Function to login the user
       public  function  login($user) //$user come from database
       {
          if ($user){
-             $this->user_id = $_SESSION['user_id'] = $user->id;
+             $this->user_id = $_SESSION['user_id'] = $user->id; //id
              $this->signed_in =true;
          }
       }
@@ -67,3 +69,4 @@
 
 
   $session = new Session();
+  $message = $session->message();
