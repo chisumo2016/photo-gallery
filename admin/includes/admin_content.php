@@ -9,12 +9,9 @@
             </h1>
 
             <?php
-                      $user = new User();
-                      $user->username = "test";
-                      $user->first_name='test';
-                      $user->last_name='test';
-                      $user->password='test';
-                      $user->create();
+              $user = User::find_user_by_id(2);
+              $user->last_name = "Williams";
+              $user->update();
 
             ?>
             <ol class="breadcrumb">
