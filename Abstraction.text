@@ -1,0 +1,23 @@
+ABSTRACTION
+  As programmer used to  hide all relevant  data about the object  , reducing complexity , increase its efficiency
+ -Escaping Values
+ -Improving
+ -Testing
+
+Improving the Create Method
+- Start with the create method in user class
+-Test the code
+//Update
+ <?php
+  $user = User::find_user_by_id(2);
+  $user->username = "TEST";
+  $user->save();
+?>
+
+//create a record
+ <?php
+  $user = new User();
+  $user->username = "TEST";
+  $user->save();
+
+?>

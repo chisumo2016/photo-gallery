@@ -70,11 +70,12 @@ Class User {
         $username = $database->escape_string($username);
         $password = $database->escape_string($password);
 
-        $sql = "SELECT * FROM  WHERE ";
+
+        $sql = "SELECT * FROM users WHERE ";
         $sql .= "username = '$username' AND ";
         $sql .= "password = '$password'";
 
-        $the_result_array = self::find_by_query($sql);
+        $the_result_array = self::find_this_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
     }
     //crud
@@ -103,17 +104,22 @@ Class User {
     {
         global $database;
         $sql = "UPDATE users SET ";
-        $sql .= "username= '" . $database->escape_string($this->username)  . "', ";
-        $sql .= "password= '" . $database->escape_string($this->password)  . "', ";
-        $sql .= "first_name= '" . $database->escape_string($this->first_name) . "', ";
-        $sql .= "last_name= '" . $database->escape_string($this->last_name)  . "' ";
-        $sql .= " WHERE id= '" . $database->escape_string($this->id);
+        $sql .="username = '" .$database->escape_string($this->username)   ."', ";
+        $sql .="password = '" .$database->escape_string($this->password)   ."', ";
+        $sql .="first_name = '" .$database->escape_string($this->first_name)   ."', ";
+        $sql .="last_name = '" .$database->escape_string($this->last_name) ."' ";
+        $sql .=" WHERE id =" .$database->escape_string($this->id);
 
         //save to database
         $database->query($sql);
 
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 
+    }
+    //Abstraction
+    public  function  save()
+    {
+        return isset($this->id) ? $this->update(): $this->create();
     }
 
     public function  delete()

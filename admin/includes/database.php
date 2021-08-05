@@ -52,10 +52,12 @@ class Database {
     public  function escape_string($string)
     {
         //$escaped_string =mysqli_real_escape_string($this->connection, $string);
-       // $escaped_string = $this->connection->real_escapre_string($string);
-       //$escaped_string = $this->connection->real_escapre_string($string);
+       // $escaped_string = $this->connection->real_escape_string($string);
+       //$escaped_string = $this->connection->real_escape_string($string);
         //return $escaped_string;
-        return $this->db->real_escapre_string($string);
+
+        return $this->db->real_escape_string($string);
+
     }
 
     public function  the_insert_id()
