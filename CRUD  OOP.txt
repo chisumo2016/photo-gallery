@@ -11,3 +11,5 @@ Testing
 
  Inserting Last ID Method (Challenge)
  -add the the_insert_id() in the database connection
+
+ Testing our Method (Solution)

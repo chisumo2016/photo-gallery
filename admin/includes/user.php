@@ -12,7 +12,7 @@ Class User {
     {
          global $database;
 
-          return self::find_this_query("SELECT * FROM users");
+        return self::find_this_query("SELECT * FROM users");
 
         /*$result_set = $database->query("SELECT * FROM users");
         return $result_set;*/
@@ -23,7 +23,7 @@ Class User {
         global $database;
        // $result_set = $database->query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
 
-        $the_result_array =  self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
+        $the_result_array = self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
 
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
@@ -66,19 +66,16 @@ Class User {
     public  static  function  verify_user($username,$password)
     {
         global $database;
+
         $username = $database->escape_string($username);
         $password = $database->escape_string($password);
 
-        $sql = "SELECT * FROM users WHERE ";
+        $sql = "SELECT * FROM  WHERE ";
+        $sql .= "username = '$username' AND ";
+        $sql .= "password = '$password'";
 
-        $sql .= "username = '{$username}' ";
-        $sql .= "AND password = '{$password}' ";
-        $sql .= "LIMIT 1";
-
-        //RETURN BACK
-        $the_result_array =  self::find_this_query($sql);
+        $the_result_array = self::find_by_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
-
     }
     //crud
     public  function  create()

@@ -7,10 +7,11 @@
       public   $user_id; //id
       public   $message;
 
-      function  __construct(){
+     public function  __construct(){
           session_start();
           $this->check_the_login();
           $this->check_message();
+
       }
 
       private  function check_the_login()
@@ -35,7 +36,7 @@
       {
          if ($user){
              $this->user_id = $_SESSION['user_id'] = $user->id; //id
-             $this->signed_in =true;
+             $this->signed_in = true;
          }
       }
 

@@ -1,20 +1,35 @@
 <?php
 
-function classAutoloader($class)
- {
-     $class = strtolower($class);
+function Autoloader($class){
 
-     $the_path = "includes/{$class}.php";
-     if (is_file($the_path) && !class_exists($class)){
-         include $the_path;
-     }
- }
+    $class= strtolower($class);
 
- spl_autoload_register('classAutoloader');
+    $the_path = "includes/{$class}.php";
 
-function redirect($location){
+    if(file_exists($the_path)){
+
+        require_once($the_path);
+
+    }else{
+
+        die("This file name{$class}.php was not found...");
+    }
+
+}
+
+ spl_autoload_register('Autoloader');
+
+//Direct to login page
+function redirect($location)
+{
+    //Direct to login page
     header("Location: {$location}");
 }
 
 
-
+/*
+spl_autoload_register(function($class) {
+    $class = strtolower($class);
+    include 'includes/'.$class.'.php';
+});
+ * */
