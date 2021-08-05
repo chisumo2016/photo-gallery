@@ -1,20 +1,23 @@
 <?php
 
 Class User {
-    //properties
 
+    //static properties
+    protected static  $db_table ="users";
+    protected static $db_table_fields = [
+        'password',
+        'username',
+        'first_name',
+        'last_name'
+    ];
+
+    // properties
     public $id;
     public $password;
     public $username;
     public $first_name;
     public $last_name;
-    protected static  $db_table ="users";
-    protected static  $db_table_fields =[
-        'username',
-        'first_name',
-        'last_name',
-        'password',
-    ];
+
 
 
     public static  function  find_all_users()
@@ -43,7 +46,7 @@ Class User {
         global $database;
         $result_set = $database->query($sql);
 
-        $the_object_array = array();
+        $the_object_array = [];
 
         while($row = mysqli_fetch_array($result_set )){
             $the_object_array[] = self::instantantion($row);
@@ -91,9 +94,9 @@ Class User {
     public  function  create()
     {
         global $database;
-        $properties = $this->properties();//column to seperate key s with key
+        $properties = $this->properties();//column to seperate keys with key
 
-        $sql = "INSERT INTO " .self::$db_table. "(". implode(",", array_keys($properties)) . ")";
+        $sql = "INSERT INTO " .static::$db_table. "(". implode(",", array_keys($properties)) . ")";
         $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
 
         //send the query
@@ -145,21 +148,21 @@ Class User {
     }
 
     //abstract properties
-    protected  function properties()
+    protected function properties()
     {
        //return get_object_vars($this);
 
         $properties = []; //to place values
 
-        foreach (self::$db_table_fields as $db_field){  //dynamic  $db_field(value)
+        foreach(self::$db_table_fields as $db_field){  //dynamic  $db_field(value)
             //check if exists and assign the value
             if (property_exists($this, $db_field)){
                 //Assign to an array
                 $properties[$db_field] = $this->$db_field;
             }
-            //Return all arrays
-            return $properties;
         }
+        //Return all arrays
+        return $properties;
 
     }
 
