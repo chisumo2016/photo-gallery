@@ -112,5 +112,7 @@ Class User {
         //save to database
         $database->query($sql);
 
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+
     }
 }
