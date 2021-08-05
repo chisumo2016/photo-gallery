@@ -25,6 +25,7 @@ Testing
 
  Update Method Query
  -Create a function within user class
+ -Create a method update in user class
 
  Testing our Method (Solution)
    <?php
@@ -33,3 +34,9 @@ Testing
        $user->update();
 
       ?>
+ Delete Method Delete Method
+ -Create a method delete in user class
+
+  Testing our Method (Solution)
+   $user = User::find_user_by_id(2);
+               $user->delete();
