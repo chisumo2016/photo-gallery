@@ -21,3 +21,20 @@ Improving the Create Method
   $user->save();
 
 ?>
+ <?php
+ $user = User::find_user_by_id(9);
+
+ $user->delete();
+?>
+
+Abstracting Tables
+-Making the CRUD more universal
+-Create a Property in user class
+   eg : protected static  $db_table ="users";
+-We can use on the table inside the SQL  "users"
+-Create() on user class
+   INSERT INTO users to  $sql = "INSERT INTO " .self::$db_table ."
+-Update() on user class
+   UPDATE users SET  to $sql = "UPDATE " .self::$db_table ." SET ";
+--Delete() on user class
+  $sql = "DELETE FROM  users  "; to $sql = "DELETE FROM  " .self::$db_table ."  ";

@@ -9,9 +9,9 @@
             </h1>
 
             <?php
-            $user = User::find_user_by_id(2);
-            $user->username = "TEST";
-            $user->save();
+            $user = User::find_user_by_id(9);
+
+            $user->delete();
             ?>
             <ol class="breadcrumb">
                 <li>
