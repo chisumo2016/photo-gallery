@@ -9,11 +9,11 @@
             </h1>
 
             <?php
-            $user = User::find_user_by_id(14);
-            $user->username = "pass";
-            $user->first_name = "pass";
-            $user->last_name = "pass";
-            $user->password = "pass";
+            $user = new User();
+            $user->username     =   "test1256e";
+            $user->first_name    =   "test156e";
+            $user->last_name    =   "test1256e";
+            $user->password     =   "test1256e";
 
             $user->save();
             ?>

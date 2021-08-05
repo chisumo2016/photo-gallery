@@ -94,7 +94,8 @@ Class User {
     public  function  create()
     {
         global $database;
-        $properties = $this->properties();//column to seperate keys with key
+        //$properties = $this->properties();//column to separate keys with key
+        $properties = $this->clean_properties();
 
         $sql = "INSERT INTO " .static::$db_table. "(". implode(",", array_keys($properties)) . ")";
         $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
@@ -114,7 +115,8 @@ Class User {
     {
         global $database;
 
-        $properties = $this->properties();//column to seperate keys with key
+        //$properties = $this->properties();//column to seperate keys with key
+        $properties = $this->clean_properties();//cleaning the property
         $properties_pairs = [];
 
         foreach ($properties as $key => $value){
@@ -165,9 +167,21 @@ Class User {
                 $properties[$db_field] = $this->$db_field;
             }
         }
-        //Return all arrays
+        //Return all arrays and values
         return $properties;
+    }
+    
+    protected  function  clean_properties()
+    {
+        global $database;
 
+        $clean_properties  = array();
+
+        foreach ($this->properties() as $key => $value) {
+            //escape the value  and put in the arrays
+            $clean_properties[$key] = $database->escape_string($value);
+        }
+        return $clean_properties;
     }
 
 }

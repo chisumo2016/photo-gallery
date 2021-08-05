@@ -87,13 +87,14 @@ Testing the Abstracted Create Method
  -Admin
     <?php
         $user = new User();
-         $user->username     =   "test125";
-         $user->first_name    =   "test15";
-         $user->last_name    =   "test125";
-         $user->password     =   "test125";
+         $user->username     =   "test1256";
+         $user->first_name    =   "test156";
+         $user->last_name    =   "test1256";
+         $user->password     =   "test1256";
 
-         $user->create();
+         $user->save();
          ?>
+
  Abstracting the Update Method
    - will be very trick
    -Bring object array
@@ -133,8 +134,6 @@ Testing the Abstracted Create Method
             return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 
 
-
-
     Testing the Abstracted Update Method
     -test via admin_content file
       <?php
@@ -143,3 +142,32 @@ Testing the Abstracted Create Method
 
       $user->update();
       ?>
+
+Escaping Values From our Abstracted Methods
+    Let create a method to  clean the properties  for us
+    We're going to use escape_string(); before going to the database.
+    escape the value  and put in the arrays
+
+protected  function  clean_properties()
+    {
+        global $database;
+
+        $clean_properties  = array();
+
+        foreach ($this->properties() as $key => $value) {
+            //escape the value  and put in the arrays
+            $clean_properties[$key] = $database->escape_string($value);
+        }
+        return $clean_properties;
+    }
+
+ Test Escaping Values From our Abstracted Methods
+    <?php
+        $user = User::find_user_by_id(14);
+        $user->username = "pass24";
+        $user->first_name = "pass24";
+        $user->last_name = "pass24";
+        $user->password = "pass24";
+
+        $user->save();
+        ?>
