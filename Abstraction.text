@@ -114,3 +114,32 @@ Testing the Abstracted Create Method
              return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 
     =After
+    global $database;
+
+            $properties = $this->properties();//column to seperate keys with key
+            $properties_pairs = [];
+
+            foreach ($properties as $key => $value){
+                $properties_pairs[] = "{$key}='{$value}'";
+            }
+            //$sql = "UPDATE users SET ";
+            $sql = "UPDATE " .self::$db_table ." SET ";
+            $sql .= implode(", ", $properties_pairs);
+            $sql .=" WHERE id =" .$database->escape_string($this->id);
+
+            //save to database
+            $database->query($sql);
+
+            return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+
+
+
+
+    Testing the Abstracted Update Method
+    -test via admin_content file
+      <?php
+      $user = User::find_user_by_id(14);
+      $user->username = "Ted";
+
+      $user->update();
+      ?>

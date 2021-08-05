@@ -9,13 +9,13 @@
             </h1>
 
             <?php
-            $user = new User();
-            $user->username     =   "test125";
-            $user->first_name    =   "test15";
-            $user->last_name    =   "test125";
-            $user->password     =   "test125";
+            $user = User::find_user_by_id(14);
+            $user->username = "pass";
+            $user->first_name = "pass";
+            $user->last_name = "pass";
+            $user->password = "pass";
 
-            $user->create();
+            $user->save();
             ?>
             <ol class="breadcrumb">
                 <li>
