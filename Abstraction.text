@@ -38,3 +38,15 @@ Abstracting Tables
    UPDATE users SET  to $sql = "UPDATE " .self::$db_table ." SET ";
 --Delete() on user class
   $sql = "DELETE FROM  users  "; to $sql = "DELETE FROM  " .self::$db_table ."  ";
+
+Abstracting Properties
+ - we can reuse other method to other class
+ -Example we can reuse other  method like delete() update() to other
+   class in the future
+-Create types of an array  like associative array create()
+
+Abstracting the Create Method Part 1
+-extract our attribute
+-create a method properties in user class as protected function properties()
+-Return the associative array created from   has_the_attribute($the_attribute)
+     return get_object_vars($this);

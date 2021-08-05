@@ -84,6 +84,13 @@ Class User {
     public  function  create()
     {
         global $database;
+        $properties = $this->properties();//column to seperate key s with key
+
+        $sql = "INSERT INTO " .self::$db_table. "(". implode(",", array_keys($properties)) . ")";
+        $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
+
+
+
         //$sql = "INSERT INTO users (username, password, first_name,last_name)";
         $sql = "INSERT INTO " .self::$db_table ."(username, password, first_name,last_name)";
         $sql .="VALUES ('";
@@ -138,6 +145,11 @@ Class User {
         $database->query($sql);
 
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+    }
+
+    protected  function properties()
+    {
+       return get_object_vars($this);
     }
 
 }
