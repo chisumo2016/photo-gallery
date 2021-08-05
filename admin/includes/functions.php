@@ -23,6 +23,7 @@ function Autoloader($class){
 function redirect($location)
 {
     //Direct to login page
+
     header("Location: {$location}");
 }
 
