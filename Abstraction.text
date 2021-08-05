@@ -46,7 +46,38 @@ Abstracting Properties
 -Create types of an array  like associative array create()
 
 Abstracting the Create Method Part 1
--extract our attribute
+-Get object_var
+-extract our attribute from the create method
 -create a method properties in user class as protected function properties()
 -Return the associative array created from   has_the_attribute($the_attribute)
      return get_object_vars($this);
+-use this to create key and value $properties = $this->properties(); loop and assign
+    Example in create()
+
+
+        //$sql = "INSERT INTO users (username, password, first_name,last_name)";
+        $sql = "INSERT INTO " .self::$db_table ."(username, password, first_name,last_name)";
+        $sql .="VALUES ('";
+        $sql .= $database->escape_string($this->username) . "', '";
+        $sql .= $database->escape_string($this->password) . "', '";
+        $sql .= $database->escape_string($this->first_name) . "', '";
+        $sql .= $database->escape_string($this->last_name) . "')";
+
+        OR  Abstract method
+        $properties = $this->properties();//column to seperate key s with key
+
+        $sql = "INSERT INTO " .self::$db_table. "(". implode(",", array_keys($properties)) . ")";
+        $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
+
+Modifying the properties method
+-we are using the object var to get key and values
+-Loop and assign
+-Create an arrays  as regular array in user class not associative
+         protected static  $db_table_fields =[
+               'username',
+               'first_name',
+               'last_name',
+               'password',
+           ];
+-Modify the  abstract properties
+  protected  function properties(){}

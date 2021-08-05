@@ -2,13 +2,20 @@
 
 Class User {
     //properties
+
     public $id;
     public $password;
     public $username;
     public $first_name;
     public $last_name;
-
     protected static  $db_table ="users";
+    protected static  $db_table_fields =[
+        'username',
+        'first_name',
+        'last_name',
+        'password',
+    ];
+
 
     public static  function  find_all_users()
     {
@@ -89,16 +96,6 @@ Class User {
         $sql = "INSERT INTO " .self::$db_table. "(". implode(",", array_keys($properties)) . ")";
         $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
 
-
-
-        //$sql = "INSERT INTO users (username, password, first_name,last_name)";
-        $sql = "INSERT INTO " .self::$db_table ."(username, password, first_name,last_name)";
-        $sql .="VALUES ('";
-        $sql .= $database->escape_string($this->username) . "', '";
-        $sql .= $database->escape_string($this->password) . "', '";
-        $sql .= $database->escape_string($this->first_name) . "', '";
-        $sql .= $database->escape_string($this->last_name) . "')";
-
         //send the query
         if ($database->query($sql)){
             //Assigned id to the object
@@ -147,9 +144,23 @@ Class User {
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 
+    //abstract properties
     protected  function properties()
     {
-       return get_object_vars($this);
+       //return get_object_vars($this);
+
+        $properties = []; //to place values
+
+        foreach (self::$db_table_fields as $db_field){  //dynamic  $db_field(value)
+            //check if exists and assign the value
+            if (property_exists($this, $db_field)){
+                //Assign to an array
+                $properties[$db_field] = $this->$db_field;
+            }
+            //Return all arrays
+            return $properties;
+        }
+
     }
 
 }
