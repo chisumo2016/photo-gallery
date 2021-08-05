@@ -85,3 +85,32 @@ Modifying the properties method
 Testing the Abstracted Create Method
  -Testing the create a method
  -Admin
+    <?php
+        $user = new User();
+         $user->username     =   "test125";
+         $user->first_name    =   "test15";
+         $user->last_name    =   "test125";
+         $user->password     =   "test125";
+
+         $user->create();
+         ?>
+ Abstracting the Update Method
+   - will be very trick
+   -Bring object array
+   -array pairs
+     =Before
+            global $database;
+             //$sql = "UPDATE users SET ";
+             $sql = "UPDATE " .self::$db_table ." SET ";
+             $sql .="username = '" .$database->escape_string($this->username)   ."', ";
+             $sql .="password = '" .$database->escape_string($this->password)   ."', ";
+             $sql .="first_name = '" .$database->escape_string($this->first_name)   ."', ";
+             $sql .="last_name = '" .$database->escape_string($this->last_name) ."' ";
+             $sql .=" WHERE id =" .$database->escape_string($this->id);
+
+             //save to database
+             $database->query($sql);
+
+             return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+
+    =After

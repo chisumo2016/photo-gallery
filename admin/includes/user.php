@@ -113,12 +113,16 @@ Class User {
     public  function update()
     {
         global $database;
+
+        $properties = $this->properties();//column to seperate keys with key
+        $properties_pairs = [];
+
+        foreach ($properties as $key => $value){
+            $properties_pairs[] = "{$key}='{$value}'";
+        }
         //$sql = "UPDATE users SET ";
         $sql = "UPDATE " .self::$db_table ." SET ";
-        $sql .="username = '" .$database->escape_string($this->username)   ."', ";
-        $sql .="password = '" .$database->escape_string($this->password)   ."', ";
-        $sql .="first_name = '" .$database->escape_string($this->first_name)   ."', ";
-        $sql .="last_name = '" .$database->escape_string($this->last_name) ."' ";
+        $sql .= implode(", ", $properties_pairs);
         $sql .=" WHERE id =" .$database->escape_string($this->id);
 
         //save to database
@@ -152,7 +156,7 @@ Class User {
     {
        //return get_object_vars($this);
 
-        $properties = []; //to place values
+        $properties = []; //to place value
 
         foreach(self::$db_table_fields as $db_field){  //dynamic  $db_field(value)
             //check if exists and assign the value
