@@ -19,3 +19,16 @@ Abstracting the remaining methods
   $the_result_array = self::find_this_query("SELECT * FROM " .self::$db_table . " WHERE id = $user_id LIMIT 1");
 -Change the query for follow the abstract  in verify_user() in user class
   $sql = "SELECT * FROM users WHERE "; to  $sql = "SELECT * FROM " .self::$db_table . " WHERE ";
+
+Create the Parent Class
+- Class inheritance
+- To create a parent class which has common thing like database , methods
+   example
+         find_all()
+         find_by_id
+         find_this_query($sql)
+         instantantion($the_record)
+-call db_object.php
+-extends db_bject class in user class to inherit the common thing
+-After moving some of the common thing from use class to db_class ,some issues will be occurs
+
