@@ -1,0 +1,4 @@
+ https://github.com/Denis2310/PHP-OOP-Course/blob/aaead505d519d80c0ba3b6b619281c26eae6151c/admin/includes/db_object.php
+   https://github.com/chisumo2016/gallery/blob/master/admin/includes/user.php
+   https://www.youtube.com/watch?v=jEfGl1R6u3Q&list=PL6tf8fRbavl1dtNrJxx27l-v1toGi-v2Q&index=5
+   https://www.udemy.com/course/oop-php-object-oriented-programing-with-project-1-course/learn/lecture/3030500#questions/15539566

@@ -1,0 +1,21 @@
+THE PHOTO CLASS
+    Table in ot DB
+    Parent Class
+    Class Properties
+    Directory Paths
+    Dynamic Image Page
+
+Creating the Database Table for our Photo Class
+ Photos :- id title  description  filename  type  size
+
+Abstracting the remaining methods
+- we need to abstract  the class user
+-Change the function from user class find_all_users() to find_all()
+-Change the query to follow the abstraction find_all()
+   return self::find_this_query("SELECT * FROM " .self::$db_table . " ");
+-Change the method find_user_by_id($user_id) to find_by_id($user_id)
+-Change the query for follow the abstract in find_by_id($user_id)
+  $the_result_array = self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
+  $the_result_array = self::find_this_query("SELECT * FROM " .self::$db_table . " WHERE id = $user_id LIMIT 1");
+-Change the query for follow the abstract  in verify_user() in user class
+  $sql = "SELECT * FROM users WHERE "; to  $sql = "SELECT * FROM " .self::$db_table . " WHERE ";
