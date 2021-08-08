@@ -4,3 +4,4 @@ PHOTO EDIT PAGE
     -Sidebar Styling
 Creating The Edit Page
  -Save as photo.php as edit
+ -build the edit page and divided into 2 part column

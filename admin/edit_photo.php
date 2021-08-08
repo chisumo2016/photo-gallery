@@ -2,6 +2,11 @@
 
 <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
 <?php
+
+if (isset($_POST['update'])){
+
+    echo "ggg";
+}
     //$photos = Photo::find_all();
 ?>
 
@@ -27,30 +32,64 @@
                         Edit Photos
                         <small>Subheading</small>
                     </h1>
-                      <div class="col-md-8">
-                          <form>
-                              <div class="form-group">
-                                  <label for="">Title</label>
-                                  <input type="text" class="form-control" id="" name="title" placeholder="">
-                              </div>
-                              <div class="form-group">
-                                  <label for="Caption">Caption</label>
-                                  <input type="text" class="form-control" id="" name="caption" placeholder="">
-                              </div>
+                    <form action="edit_photo.php" method="post">
+                        <div class="col-md-8">
 
-                              <div class="form-group">
-                                  <label for="">Alternative Text</label>
-                                  <input type="text" class="form-control" id="alternative_text"  name="alternative_text" placeholder="">
-                              </div>
+                            <div class="form-group">
+                                <label for="">Title</label>
+                                <input type="text" class="form-control" id="" name="title" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="Caption">Caption</label>
+                                <input type="text" class="form-control" id="" name="caption" placeholder="">
+                            </div>
 
-                              <div class="form-group">
-                                  <label for="">Description</label>
-                                  <textarea class="form-control" id=""  name="description" rows="3"></textarea>
-                              </div>
-                          </form>
-                      </div>
+                            <div class="form-group">
+                                <label for="">Alternative Text</label>
+                                <input type="text" class="form-control" id="alternative_text"  name="alternative_text" placeholder="">
+                            </div>
 
+                            <div class="form-group">
+                                <label for="">Description</label>
+                                <textarea class="form-control" id=""  name="description" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="photo-info-box">
+                                <div class="info-box-header">
+                                    <h4 class="glyphicon glyphicon-menu-up"> Save</h4>
+                                </div>
+                                <div class="inside">
+                                    <div class="box-inner">
+                                        <p class="text">
+                                            <span class="glyphicon glyphicon-calendar"></span> Uploaded on:
+                                        </p>
+                                        <p class="text">
+                                            Photo ID : <span class="data photo_id_box">34</span>
+                                        </p>
+                                        <p class="text">
+                                            Filename : <span class="data">image.jpg</span>
+                                        </p>
+                                        <p class="text">
+                                            File Type : <span class="data">jpg</span>
+                                        </p>
+                                        <p class="text">
+                                            File Size: <span class="data">3445555</span>
+                                        </p>
+                                    </div>
+                                    <div class="info-box-footer clearfix">
+                                        <div class="info-box-delete pull-left">
+                                            <a href="" class="btn btn-danger btn-lg">Delete</a>
+                                        </div>
 
+                                        <div class="info-box-update pull-right">
+                                            <input type="submit" name="update" value="update" class="btn btn-lg btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <!-- /.row -->
