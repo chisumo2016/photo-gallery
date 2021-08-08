@@ -157,6 +157,9 @@ Uploading and Testing
 -Error Query FailedIncorrect integer value: '' for column 'photo_id' at row 1
   SOLUTION :
 
+Coding The HTML for our Photos Table
+-Build a page to display the images (TableS)
+-inside admin area
 
 
 
