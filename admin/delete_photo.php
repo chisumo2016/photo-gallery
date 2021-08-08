@@ -3,9 +3,18 @@
 
 <?php
 
-   echo "done";
+ if (empty($_GET['photo_id'])){
+     redirect("photos.php");
+ }
 
+ //Find the id
+ $photo = Photo::find_by_id($_GET['photo_id']);
+ if ($photo){
+     $photo->delete_photo();
+ }else{
 
+     redirect("photos.php");
+ }
 
 
 ?>

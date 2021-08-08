@@ -4,5 +4,8 @@ PHOTO DELETION
  -Delete Method
 
  DELETE PAGE and Links Part
- -add the link in the photo
- -Create delete will disappear
+ -add the link in the photo page
+ -Create delete page w/c will process the functionality of delete"
+ -to ditect the id comes in
+
+
