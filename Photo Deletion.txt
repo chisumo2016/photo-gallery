@@ -1,0 +1,8 @@
+PHOTO DELETION
+ -Building delete the page
+ -More Generic id's
+ -Delete Method
+
+ DELETE PAGE and Links Part
+ -add the link in the photo
+ -Create delete will disappear
