@@ -115,6 +115,20 @@ Testing Inherited Methods
 
 Setting Up our Properties Array
 -set the value to our class
+-create the properties for our images , errors and customs error
+    public  $tmp_path;
+    public  $upload_directory     = "images";
+    public  $custom_errors        = [];
+    public  $uploaded_errors
+
+Building Directory Paths
+-set the constant path for our root path
+-Define some constant
+-Open init file  define the path
+-to look absolute path  Applications/MAMP/htdocs/gallery_application
+   <?php
+     echo  INCLUDES_PATH;
+   ?>
 
 
 

@@ -23,9 +23,9 @@ class  Photo extends  Db_object
     public $size;
 
    public  $tmp_path;
-   public  $upload_directory    = "images";
-   public $custom_errors        = [];
-   public $uploaded_errors      =
+   public  $upload_directory     = "images";
+   public  $custom_errors        = [];
+   public  $uploaded_errors      =
             [
             UPLOAD_ERR_OK            => "There is no error, the file uploaded with success.",
             UPLOAD_ERR_INI_SIZE      => "The uploaded file exceeds the upload_max_filesize directive in php.ini.",

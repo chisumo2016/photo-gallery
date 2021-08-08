@@ -9,14 +9,7 @@
             </h1>
 
             <?php
-            $photo =  new Photo();
-            $photo->title ="Woooo";
-            $photo->description ="Woooo";
-            $photo->filename ="image.png";
-            $photo->type ="image";
-            $photo->size ="12";
-
-            $photo->save();
+            echo  INCLUDES_PATH;
             ?>
 
             <ol class="breadcrumb">
