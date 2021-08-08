@@ -113,6 +113,26 @@ Testing Inherited Methods
     $photo->save();
 ?>
 
+Setting Up our Properties Array
+-set the value to our class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
