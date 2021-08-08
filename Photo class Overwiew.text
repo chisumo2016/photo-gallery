@@ -81,6 +81,36 @@ The Photo Class
      }
   ?>
 
+
+<?php
+   $users = new  User();
+   $users->username ="STUDENT";
+   $users->save();
+?>
+
 -include the photo class in init
+
+Adding Class Properties
+-create the properties/Attribute of the photo class
+-Match with the attributes from Photos DB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
