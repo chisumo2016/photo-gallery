@@ -1,13 +1,14 @@
 <?php
 
-class  db_object{
+class  Db_object{
 
+    protected static  $db_table ="users";
 
     public static  function  find_all()
     {
         global $database;
 
-        return self::find_this_query("SELECT * FROM " .self::$db_table . " ");
+        return static::find_this_query("SELECT * FROM " .self::$db_table . "");
 
     }
 
@@ -15,7 +16,7 @@ class  db_object{
     {
         global $database;
 
-        $the_result_array = self::find_this_query("SELECT * FROM " .self::$db_table . " WHERE id = $user_id LIMIT 1");
+        $the_result_array = static::find_by_query("SELECT * FROM "  . static::$db_table ." WHERE id =$user_id LIMIT 1");
 
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
@@ -29,16 +30,18 @@ class  db_object{
         $the_object_array = [];
 
         while($row = mysqli_fetch_array($result_set )){
-            $the_object_array[] = self::instantantion($row);
+            $the_object_array[] = static::instantantion($row);
         }
         return $the_object_array ;
     }
 
 
-
+    //Testing the Instantiaon method
     public  static function instantantion($the_record)
     {
-        $the_object = new self;
+        $calling_class = get_called_class();
+
+        $the_object = new $calling_class;
 
         foreach ($the_record as  $the_attribute => $value) {
 

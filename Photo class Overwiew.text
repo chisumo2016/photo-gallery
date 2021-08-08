@@ -31,4 +31,36 @@ Create the Parent Class
 -call db_object.php
 -extends db_bject class in user class to inherit the common thing
 -After moving some of the common thing from use class to db_class ,some issues will be occurs
+     Fatal error: Access to undeclared static property: DB_object::$db_table
+
+
+Late Static Binding
+ -After removing the common method  to the parent class ,  we cant reuse the  self:: key and method
+     (static properties and static method)
+ -Replace with self::
+ -We should see users
+ -solution  is use the late static binding
+        $this->
+        static::  this is recommended one
+ -Add the db_object to init file
+ -in instantantion($the_record) we need to use the calling class from php to replace the self::
+ instantantion the calling class, will help to instantiate the calling class and replace the self::
+      $the_object = new self;
+
+       $calling_class = get_called_class();
+
+      $the_object = new $calling_class;
+
+      Test the application
+<?php
+     $users = User::find_all();
+     foreach ($users as $user){
+         echo $user->username ."<br>";
+     }
+  ?>
+
+
+
+
+
 

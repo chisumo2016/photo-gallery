@@ -9,13 +9,10 @@
             </h1>
 
             <?php
-            $user = new User();
-            $user->username     =   "test1256e";
-            $user->first_name    =   "test156e";
-            $user->last_name    =   "test1256e";
-            $user->password     =   "test1256e";
-
-            $user->save();
+               $users = User::find_all();
+               foreach ($users as $user){
+                   echo $user->username ."<br>";
+               }
             ?>
             <ol class="breadcrumb">
                 <li>

@@ -1,6 +1,6 @@
 <?php
 
-Class User  extends  db_object {
+Class User  extends  Db_object {
 
     //static properties
     protected static  $db_table ="users";
@@ -17,8 +17,6 @@ Class User  extends  db_object {
     public $username;
     public $first_name;
     public $last_name;
-
-
 
 
 
