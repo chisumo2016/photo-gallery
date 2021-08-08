@@ -4,7 +4,7 @@
 <?php
 
  if (empty($_GET['id'])){
-     redirect("../photos.php");
+     redirect("photos.php");
  }
 
  //Find the id
@@ -12,10 +12,10 @@
  if ($photo){
      $photo->delete_photo();
      //refresh
-     redirect("../photos.php");
+     redirect("photos.php");
  }else{
 
-     redirect("../photos.php");
+     redirect("photos.php");
  }
 
 
