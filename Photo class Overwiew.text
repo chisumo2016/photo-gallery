@@ -136,6 +136,9 @@ Set File Method
 -create a function setFile(4file)
 -Error checking and setting some properties
 
+Save Method Part
+- save the field and keep truck  of information
+-create an images folder in admin
 
 
 

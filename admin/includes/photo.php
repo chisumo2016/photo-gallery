@@ -15,7 +15,7 @@ class  Photo extends  Db_object
     ];
 
     // properties
-    public $id;
+    public $photo_id;
     public $title;
     public $description;
     public $filename;
@@ -59,6 +59,27 @@ class  Photo extends  Db_object
             $this->size         = $file['size'];
         }
 
+    }
+
+
+    public  function  save()
+    {
+        //error checking
+        if ($this->photo_id){
+            $this->update();
+        }else{
+            if (!empty($this->errors)){
+                return false;
+            }
+            if (empty($this->filename) || empty($this->tmp_path)){
+                $this->errors[] = "the file was not available";
+                return  false;
+            }
+            //create a target path /permanent location
+            $target_path = SITE_ROOT . DS . 'admin' . DS . $this->upload_directory . DS . $this->filename;
+
+            $this->create();
+        }
     }
 
 }
