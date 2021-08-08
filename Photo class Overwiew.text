@@ -130,6 +130,12 @@ Building Directory Paths
      echo  INCLUDES_PATH;
    ?>
 
+Set File Method
+-assign the super global files
+-Passing $_FILES['uploaded_file'] as an argument
+-create a function setFile(4file)
+-Error checking and setting some properties
+
 
 
 

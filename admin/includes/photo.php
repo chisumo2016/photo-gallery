@@ -24,8 +24,8 @@ class  Photo extends  Db_object
 
    public  $tmp_path;
    public  $upload_directory     = "images";
-   public  $custom_errors        = [];
-   public  $uploaded_errors      =
+   public  $errors               = [];  //customs errors
+   public  $upload_errors_array  =
             [
             UPLOAD_ERR_OK            => "There is no error, the file uploaded with success.",
             UPLOAD_ERR_INI_SIZE      => "The uploaded file exceeds the upload_max_filesize directive in php.ini.",
@@ -36,5 +36,29 @@ class  Photo extends  Db_object
             UPLOAD_ERR_CANT_WRITE    => " Failed to write file to disk.",
             UPLOAD_ERR_EXTENSION     => "A PHP extension stopped the file upload. ",
             ];
+
+  //This is p$_FILES['uploaded_file'] as an argument
+    public  function  set_file($file)
+    {
+        //Error checking if the file is uploaded
+        if (empty($file) || !$file || !is_array($file)){
+            $this->errors[]  = "There was no file uploaded here";
+            return false;
+
+        //check if the file has uploded
+        }elseif($file['errors'] != 0){
+
+            $this->errors[] = $this->upload_errors_array[$file['error']];
+            return  false;
+
+        }else {
+            //assign
+            $this->filename     = basename($file['name']);
+            $this->tmp_path     = $file['tmp_name'];
+            $this->type         = $file['type'];
+            $this->size         = $file['size'];
+        }
+
+    }
 
 }
