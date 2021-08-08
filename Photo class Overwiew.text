@@ -137,8 +137,19 @@ Set File Method
 -Error checking and setting some properties
 
 Save Method Part
+-Checking error if the photo_id is theres
+Checking the filename is there
+-Checking the target
 - save the field and keep truck  of information
 -create an images folder in admin
+
+Save Method Part
+-Check if the file exists
+-Move the  uploaded file
+-Unset the files
+
+
+
 
 
 
