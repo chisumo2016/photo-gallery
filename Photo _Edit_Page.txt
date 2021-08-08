@@ -8,3 +8,7 @@ Creating The Edit Page
  -build the edit page and divided into 2 part column
 
  Writing our PHP Code Part # 1
+ -implemented the functionality code in edit photo file .
+
+Displaying Data
+ -echoing the value in edit photo page

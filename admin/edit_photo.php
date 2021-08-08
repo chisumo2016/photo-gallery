@@ -10,13 +10,16 @@ if(empty($_GET['id'])){
     $photo = Photo::find_by_id($_GET['id']);
 
     if (isset($_POST['update'])){
-     if ($photo){
-          $_POST['title'];
-          $_POST['caption'];
-          $_POST['description'];
-          $_POST['TITLE'];
-     }
 
+     if ($photo){
+
+         //Assign to object property
+          $photo-> title = $_POST['title'];
+         $photo-> caption =$_POST['caption'];
+         $photo-> description =$_POST['description'];
+         $photo-> alternate_text =$_POST['alternate_text'];
+         $photo-> title =$_POST['TITLE'];
+        }
     }
 }
 
@@ -50,21 +53,42 @@ if(empty($_GET['id'])){
 
                             <div class="form-group">
                                 <label for="">Title</label>
-                                <input type="text" class="form-control" id="" name="title" placeholder="">
+                                <input
+                                        type="text"
+                                        class="form-control"
+                                        id=""
+                                        name="title"
+                                        value="<?php echo $photo->title; ?>"
+                                        placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="Caption">Caption</label>
-                                <input type="text" class="form-control" id="" name="caption" placeholder="">
+                                <input
+                                        type="text"
+                                        class="form-control"
+                                        id="" name="caption"
+                                        value="<?php echo $photo->caption; ?>"
+                                        placeholder="">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Alternative Text</label>
-                                <input type="text" class="form-control" id="alternate_text"  name="alternative_text" placeholder="">
+                                <input
+                                        type="text"
+                                        class="form-control"
+                                        id="alternate_text"
+                                        name="alternative_text"
+                                        value="<?php  echo $photo->alternative_text; ?>"
+                                        placeholder="">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Description</label>
-                                <textarea class="form-control" id=""  name="description" rows="3"></textarea>
+                                <textarea
+                                        class="form-control" id=""
+                                        name="description"
+                                        rows="15"
+                                        cols="30"><?php  echo $photo->description; ?></textarea>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -92,7 +116,7 @@ if(empty($_GET['id'])){
                                     </div>
                                     <div class="info-box-footer clearfix">
                                         <div class="info-box-delete pull-left">
-                                            <a href="" class="btn btn-danger btn-lg">Delete</a>
+                                            <a href="delete_photo.php?id=<?php $photo->id;?>" class="btn btn-danger btn-lg">Delete</a>
                                         </div>
 
                                         <div class="info-box-update pull-right">
