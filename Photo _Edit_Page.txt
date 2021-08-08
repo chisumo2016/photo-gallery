@@ -12,3 +12,6 @@ Creating The Edit Page
 
 Displaying Data
  -echoing the value in edit photo page
+
+ Updating Data
+ -to write the function to update the data in edit photo page

@@ -14,11 +14,13 @@ if(empty($_GET['id'])){
      if ($photo){
 
          //Assign to object property
-          $photo-> title = $_POST['title'];
-         $photo-> caption =$_POST['caption'];
-         $photo-> description =$_POST['description'];
-         $photo-> alternate_text =$_POST['alternate_text'];
-         $photo-> title =$_POST['TITLE'];
+            $photo-> title          =   $_POST['title'];
+            $photo-> caption        =   $_POST['caption'];
+            $photo-> description    =   $_POST['description'];
+            $photo-> alternative_text =   $_POST['alternative_text'];
+
+            $photo->save();
+
         }
     }
 }
@@ -48,7 +50,7 @@ if(empty($_GET['id'])){
                         Edit Photos
                         <small>Subheading</small>
                     </h1>
-                    <form action="edit_photo.php" method="post">
+                    <form action="" method="post">
                         <div class="col-md-8">
 
                             <div class="form-group">
