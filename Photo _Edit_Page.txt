@@ -2,6 +2,9 @@ PHOTO EDIT PAGE
     -Installing WYSIWYG editor
     -HTML Form
     -Sidebar Styling
+
 Creating The Edit Page
  -Save as photo.php as edit
  -build the edit page and divided into 2 part column
+
+ Writing our PHP Code Part # 1

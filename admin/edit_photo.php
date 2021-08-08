@@ -3,10 +3,23 @@
 <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
 <?php
 
-if (isset($_POST['update'])){
+ //check if the id
+if(empty($_GET['id'])){
+    redirect("photos.php");
+}else{
+    $photo = Photo::find_by_id($_GET['id']);
 
-    echo "ggg";
+    if (isset($_POST['update'])){
+     if ($photo){
+          $_POST['title'];
+          $_POST['caption'];
+          $_POST['description'];
+          $_POST['TITLE'];
+     }
+
+    }
 }
+
     //$photos = Photo::find_all();
 ?>
 
@@ -46,7 +59,7 @@ if (isset($_POST['update'])){
 
                             <div class="form-group">
                                 <label for="">Alternative Text</label>
-                                <input type="text" class="form-control" id="alternative_text"  name="alternative_text" placeholder="">
+                                <input type="text" class="form-control" id="alternate_text"  name="alternative_text" placeholder="">
                             </div>
 
                             <div class="form-group">
