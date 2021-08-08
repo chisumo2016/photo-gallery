@@ -46,7 +46,10 @@
                                           <tr>
                                               <td><?php echo $photo->id; ?></td>
                                               <td>
-                                                  <img src="<?php echo $photo->picture_path(); ?>" alt="">
+                                                  <img
+                                                          class="admin-photo-thumbnail"
+                                                          src="<?php echo $photo->picture_path(); ?>"
+                                                          alt="">
                                                   <div class="pictures_link ">
                                                       <a href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-danger">Delete</a>
                                                       <a href="edit_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-warning">Edit</a>

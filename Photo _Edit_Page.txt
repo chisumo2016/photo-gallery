@@ -26,3 +26,5 @@ Installing The Text Editor
 - we download or cdn
 -create file called script in js folder
 
+ Setting Size for Photos Page Thumbnail
+ -You might encounter  with the image to become very images
