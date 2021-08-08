@@ -1,4 +1,5 @@
 <?php include("includes/header.php"); ?>
+<?php if (!$session->is_signed_in()){redirect("login.php");} ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -21,14 +22,21 @@
                         Photos
                         <small>Subheading</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li>
-                            <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                        </li>
-                        <li class="active">
-                            <i class="fa fa-file"></i> Blank Page
-                        </li>
-                    </ol>
+                    <div class="col-md-6">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="title">
+                            </div>
+                            <div class="form-group">
+                                <input type="file" name="file_upload">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" name="submit">
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
