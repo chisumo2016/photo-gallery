@@ -40,7 +40,7 @@
                         <small>Subheading</small>
                     </h1>
                     <div class="col-md-6">
-                        <? echo $message; ?>
+                        <?php echo $message; ?>
                         <form action="" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="title">

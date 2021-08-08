@@ -163,7 +163,9 @@ Coding The HTML for our Photos Table
 -use foreach to loop
 
 Dynamic Image Path
-
+-if we change the directory path in the future ,it wont break the application
+-Trick is by concantinate with filename .
+-Build the simple method  picture path
 
 
 
