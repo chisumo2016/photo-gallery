@@ -4,6 +4,7 @@ class  Db_object{
 
     protected static  $db_table ="users";
 
+
     public static  function  find_all()
     {
         global $database;

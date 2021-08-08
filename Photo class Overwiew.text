@@ -152,7 +152,10 @@ HTML Form Creation
 - create a form  to be able to uploaded to server parmanently
 -Go to index in admin a copy  a piece of code  and page top upload.php file
 
-
+Uploading and Testing
+-From the temporary to parmanet location
+-Error Query FailedIncorrect integer value: '' for column 'photo_id' at row 1
+  SOLUTION :
 
 
 
