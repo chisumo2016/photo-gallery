@@ -1,5 +1,10 @@
 <?php include("includes/header.php"); ?>
 
+<?php if (!$session->is_signed_in()){redirect("login.php");} ?>
+<?php
+    $photos = Photo::find_all();
+?>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -23,7 +28,7 @@
                         <small>Subheading</small>
                     </h1>
                       <div class="col-md-12">
-                          <table class=" table-hover">
+                          <table class="table table-hover">
                               <thead>
                                     <tr>
                                         <th>Id</th>
@@ -36,12 +41,17 @@
                                     </tr>
                               </thead>
                               <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                  <?php
+                                      foreach ($photos as $photo)  : ?>
+                                          <tr>
+                                              <td><?php echo $photo->photo_id; ?></td>
+                                              <td><img src="http://placehold.it/62x62" alt=""></td>
+                                              <td><?php echo  $photo->title; ?></td>
+                                              <td><?php echo  $photo->filename; ?></td>
+                                              <td><?php echo  $photo->type; ?></td>
+                                              <td><?php echo  $photo->size; ?></td>
+                                          </tr>
+                                  <?php endforeach; ?>
                               </tbody>
                           </table><!--End of Table-->
                       </div>
