@@ -15,7 +15,7 @@ class  Photo extends  Db_object
 
 
     // properties
-    public $photo_id;
+    public $id; //photo_id
     public $title;
     public $description;
     public $filename;
@@ -65,7 +65,7 @@ class  Photo extends  Db_object
     public  function  save()
     {
         //error checking
-        if ($this->photo_id){
+        if ($this->id){
             $this->update();
         }else{
             if (!empty($this->errors)){

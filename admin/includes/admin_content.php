@@ -9,7 +9,8 @@
             </h1>
 
             <?php
-            echo  INCLUDES_PATH;
+                $photo = Photo::find_by_id(7);
+                echo $photo->filename;
             ?>
 
             <ol class="breadcrumb">

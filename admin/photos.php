@@ -44,11 +44,11 @@
                                   <?php
                                       foreach ($photos as $photo): ?>
                                           <tr>
-                                              <td><?php echo $photo->photo_id; ?></td>
+                                              <td><?php echo $photo->id; ?></td>
                                               <td>
                                                   <img src="<?php echo $photo->picture_path(); ?>" alt="">
                                                   <div class="pictures_link ">
-                                                      <a href="delete_photo.php/?id=<?php echo $photo->photo_id; ?>" class="btn btn-xs btn-danger">Delete</a>
+                                                      <a href="delete_photo.php/?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-danger">Delete</a>
                                                       <a href="" class="btn btn-xs btn-warning">Edit</a>
                                                       <a href="" class="btn btn-xs btn-primary">View</a>
                                                   </div>

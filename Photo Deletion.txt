@@ -9,3 +9,17 @@ PHOTO DELETION
  -to ditect the id comes in
 
 
+ Making our Application More Generic
+ - if we check on db_object class ,the find_by_id($user_id) was made to user_id
+ -We need to modify this to be more generic to our application
+ -Let us change on find_by_id($user_id)  to find_by_id($id) not user id
+ -Let to photo class and search $photo_id and replace with $id
+ -Change $photo_id and replace with $id in photo.php page
+ -Update the database in phpmyadmin and replace photo_id to id
+
+TEST THE APPLICATION
+ <?php
+    $photo = Photo::find_by_id(7);
+    echo $photo->filename;
+?>
+
