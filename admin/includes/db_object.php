@@ -8,7 +8,7 @@ class  Db_object{
     {
         global $database;
 
-        return static::find_this_query("SELECT * FROM " .self::$db_table . "");
+        return static::find_by_query("SELECT * FROM " .static::$db_table . "");
 
     }
 
@@ -22,7 +22,7 @@ class  Db_object{
 
     }
 
-    public  static  function  find_this_query($sql)
+    public  static  function  find_by_query($sql)
     {
         global $database;
         $result_set = $database->query($sql);
@@ -60,6 +60,99 @@ class  Db_object{
         return  array_key_exists($the_attribute, $object_properties);
     }
 
+    //abstract properties
+    protected function properties()
+    {
+        //return get_object_vars($this);
+
+        $properties = []; //to place value
+
+        foreach(static::$db_table_fields as $db_field){  //dynamic  $db_field(value)
+            //check if exists and assign the value
+            if (property_exists($this, $db_field)){
+                //Assign to an array
+                $properties[$db_field] = $this->$db_field;
+            }
+        }
+        //Return all arrays and values
+        return $properties;
+    }
+
+    protected  function  clean_properties()
+    {
+        global $database;
+
+        $clean_properties  = array();
+
+        foreach ($this->properties() as $key => $value) {
+            //escape the value  and put in the arrays
+            $clean_properties[$key] = $database->escape_string($value);
+        }
+        return $clean_properties;
+    }
+
+    //crud
+    public  function  create()
+    {
+        global $database;
+        //$properties = $this->properties();//column to separate keys with key
+        $properties = $this->clean_properties();
+
+        $sql = "INSERT INTO " .static::$db_table. "(". implode(",", array_keys($properties)) . ")";
+        $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
+
+        //send the query
+        if ($database->query($sql)){
+            //Assigned id to the object
+            $this->id = $database->the_insert_id();
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public  function update()
+    {
+        global $database;
+
+        //$properties = $this->properties();//column to seperate keys with key
+        $properties = $this->clean_properties();//cleaning the property
+        $properties_pairs = [];
+
+        foreach ($properties as $key => $value){
+            $properties_pairs[] = "{$key}='{$value}'";
+        }
+        //$sql = "UPDATE users SET ";
+        $sql = "UPDATE " .static::$db_table ." SET ";
+        $sql .= implode(", ", $properties_pairs);
+        $sql .=" WHERE id =" .$database->escape_string($this->id);
+
+        //save to database
+        $database->query($sql);
+
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+
+    }
+    //Abstraction
+    public  function  save()
+    {
+        return isset($this->id) ? $this->update(): $this->create();
+    }
+
+    public function  delete()
+    {
+        global $database;
+        //$sql = "DELETE FROM  users  ";
+        $sql = "DELETE FROM  " .static::$db_table ."  ";
+        $sql .= "WHERE id=" . $database->escape_string($this->id);
+        $sql .= " LIMIT 1";
+
+        //save to database
+        $database->query($sql);
+
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+    }
 
 
 }

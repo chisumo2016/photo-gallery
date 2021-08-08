@@ -9,10 +9,9 @@
             </h1>
 
             <?php
-               $users = User::find_all();
-               foreach ($users as $user){
-                   echo $user->username ."<br>";
-               }
+               $users = new  User();
+               $users->username ="STUDENT";
+               $users->save();
             ?>
             <ol class="breadcrumb">
                 <li>

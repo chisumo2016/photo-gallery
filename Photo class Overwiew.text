@@ -59,8 +59,28 @@ Late Static Binding
      }
   ?>
 
+NB: READ MORE ABOUT LATE STATIC BINDING
 
+<?php
+   $users = User::find_all();
+   foreach ($users as $user){
+       echo $user->username ."<br>";
+   }
+?>
 
+The Photo Class
+- create photo class w/c inherit the DB_object
+-Take some of the code from the user class and paste  parent class  (CRUD)
+-Take the properties () and clean_properties to db_object  class
+-Remember to change from self:: to static::
+-Please test the application in admin_content,php
+  <?php
+     $users = User::find_all();
+     foreach ($users as $user){
+         echo $user->username ."<br>";
+     }
+  ?>
 
+-include the photo class in init
 
 
