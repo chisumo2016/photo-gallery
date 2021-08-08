@@ -92,9 +92,10 @@ if(empty($_GET['id'])){
                             </div>
 
                             <div class="form-group">
-                                <label for="">Description</label>
+                                <label for="summernote">Description</label>
                                 <textarea
-                                        class="form-control" id=""
+                                        class="form-control"
+                                        id="summernote""
                                         name="description"
                                         rows="15"
                                         cols="30"><?php  echo $photo->description; ?></textarea>

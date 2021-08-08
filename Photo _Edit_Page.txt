@@ -20,3 +20,9 @@ Displaying Data
 Picture and Sidebar Styling
 -edit photo file add  an image tag
 
+Installing The Text Editor
+-install text editor to make the page nice
+-use https://summernote.org/
+- we download or cdn
+-create file called script in js folder
+
