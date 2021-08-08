@@ -160,7 +160,9 @@ Uploading and Testing
 Coding The HTML for our Photos Table
 -Build a page to display the images (TableS)
 -inside admin area
+-use foreach to loop
 
+Dynamic Image Path
 
 
 

@@ -6,7 +6,6 @@ class  Photo extends  Db_object
     //static properties
     protected static  $db_table ="photos"; // Abstracting table
     protected static $db_table_fields = [
-        'photo_id',
         'title',
         'description',
         'filename',
