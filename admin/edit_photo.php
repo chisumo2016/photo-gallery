@@ -64,6 +64,13 @@ if(empty($_GET['id'])){
                                         placeholder="">
                             </div>
                             <div class="form-group">
+                                <label for="">Avatar</label>
+                                <a href="" class="thumbnail">
+                                    <img src="<?php  echo $photo->picture_path();?>" alt="">
+                                </a>
+                                       
+                            </div>
+                            <div class="form-group">
                                 <label for="Caption">Caption</label>
                                 <input
                                         type="text"
@@ -96,12 +103,12 @@ if(empty($_GET['id'])){
                         <div class="col-md-4">
                             <div class="photo-info-box">
                                 <div class="info-box-header">
-                                    <h4 class="glyphicon glyphicon-menu-up"> Save</h4>
+                                    <h4>Save <span id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span></h4>
                                 </div>
                                 <div class="inside">
                                     <div class="box-inner">
                                         <p class="text">
-                                            <span class="glyphicon glyphicon-calendar"></span> Uploaded on:
+                                            <span class="glyphicon glyphicon-calendar"></span> Uploaded on: July 22, 2030 @ 5:26
                                         </p>
                                         <p class="text">
                                             Photo ID : <span class="data photo_id_box">34</span>

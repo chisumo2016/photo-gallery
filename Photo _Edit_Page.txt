@@ -15,3 +15,8 @@ Displaying Data
 
  Updating Data
  -to write the function to update the data in edit photo page
+ - pull the value in edit photo
+
+Picture and Sidebar Styling
+-edit photo file add  an image tag
+
