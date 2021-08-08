@@ -3,17 +3,19 @@
 
 <?php
 
- if (empty($_GET['photo_id'])){
-     redirect("photos.php");
+ if (empty($_GET['id'])){
+     redirect("../photos.php");
  }
 
  //Find the id
- $photo = Photo::find_by_id($_GET['photo_id']);
+ $photo = Photo::find_by_id($_GET['id']);
  if ($photo){
      $photo->delete_photo();
+     //refresh
+     redirect("../photos.php");
  }else{
 
-     redirect("photos.php");
+     redirect("../photos.php");
  }
 
 

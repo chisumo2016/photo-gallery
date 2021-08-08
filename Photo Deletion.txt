@@ -23,3 +23,7 @@ TEST THE APPLICATION
     echo $photo->filename;
 ?>
 
+Creating The Delete Method
+-Under delete_photo file  delete_photo();
+-Create a method delete_photo() in photo class
+-delete file in table and server

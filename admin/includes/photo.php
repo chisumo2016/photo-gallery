@@ -104,4 +104,18 @@ class  Photo extends  Db_object
         return $this->upload_directory .DS. $this->filename;
     }
 
+    public  function  delete_photo()
+    {
+        //delete from data from table
+        if ($this->delete()){
+            //delete the file
+            $target_path = SITE_ROOT.DS. 'admin' . DS . $this->picture_path();
+
+           return unlink($target_path) ? true : false;
+
+        }else{
+            return  false;
+        }
+    }
+
 }
