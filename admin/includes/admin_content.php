@@ -9,10 +9,16 @@
             </h1>
 
             <?php
-               $users = new  User();
-               $users->username ="STUDENT";
-               $users->save();
+            $photo =  new Photo();
+            $photo->title ="Woooo";
+            $photo->description ="Woooo";
+            $photo->filename ="image.png";
+            $photo->type ="image";
+            $photo->size ="12";
+
+            $photo->save();
             ?>
+
             <ol class="breadcrumb">
                 <li>
                     <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>

@@ -6,7 +6,7 @@ class  Photo extends  Db_object
     //static properties
     protected static  $db_table ="photos";
     protected static $db_table_fields = [
-        'id',
+        'photo_id',
         'title',
         'description',
         'filename',
@@ -21,12 +21,6 @@ class  Photo extends  Db_object
     public $filename;
     public $type;
     public $size;
-
-
-
-
-
-
 
 
 }

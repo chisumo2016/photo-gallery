@@ -94,6 +94,24 @@ Adding Class Properties
 -create the properties/Attribute of the photo class
 -Match with the attributes from Photos DB
 
+Testing Inherited Methods
+-from
+   $photos = Photo::find_all();
+    foreach ($photos as $photo){
+        echo $photo->title ."<br>";
+    }
+?>
+
+   <?php
+    $photo =  new Photo();
+    $photo->title ="Woooo";
+    $photo->description ="Woooo";
+    $photo->filename ="image.png";
+    $photo->type ="image";
+    $photo->size ="12";
+
+    $photo->save();
+?>
 
 
 
