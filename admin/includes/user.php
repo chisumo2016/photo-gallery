@@ -8,7 +8,8 @@ Class User  extends  Db_object {
         'password',
         'username',
         'first_name',
-        'last_name'
+        'last_name',
+        'user_image'
     ];
 
     // properties
@@ -17,6 +18,9 @@ Class User  extends  Db_object {
     public $username;
     public $first_name;
     public $last_name;
+    public $user_image;
+    public  $upload_directory = "images";
+    public  $image_placeholder ="http://placehold.it/400x400&text=image";
 
 
 
@@ -33,6 +37,11 @@ Class User  extends  Db_object {
 
         $the_result_array = self::find_by_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
+    }
+
+    public  function   image_path_placeholder()
+    {
+        return empty($this->user_image) ? $this->image_placeholder : $this->upload_directory.DS.$this->user_image;
     }
 
 }

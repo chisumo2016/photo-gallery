@@ -4,4 +4,17 @@ ADMIN USERS
  -User CRUD
 
 Displaying User Page
- -Copy the code from photo.php and repaste to user file in admin
+ -Copy the code from photo.php and re-paste to user file in admin
+ -Display all users in admin area
+ -The photo is missing we need tpo add another column in the database;
+
+ Working with User Image
+ -add the photo in user
+ -place the placeholder  if we dont have image
+ -Add the column in database
+ -add some properties in user class
+        public $user_image;
+        public  $upload_directory = "images";
+        public  $image_placeholder ="http://placehold.it/400x400&text=image";
+ -Create a method for photo in user class
+ -Add the method top display the image in user file
