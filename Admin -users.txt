@@ -62,6 +62,12 @@ Delete within Edit User Page
 -create a button to delete the image to the user
 -Move the set_file($file) to db_object class
 
+ Fixing Duplicate Record Creation Bug
+ -it duplicate a record  in the database once you update the record .
+ -The reason is that we have two method user.php and user-edit.php
+     $this->create()  we have to remove in the user class and rename the function to upload_photo
+-Call $upload_photo() method inside edit
+
 
 
 
