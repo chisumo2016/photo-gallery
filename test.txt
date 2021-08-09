@@ -1,0 +1,1 @@
+object(User)#4 (8) { ["id"]=> NULL ["password"]=> NULL ["username"]=> NULL ["first_name"]=> NULL ["last_name"]=> NULL ["user_image"]=> NULL ["upload_directory"]=> string(6) "images" ["image_placeholder"]=> string(38) "http://placehold.it/400x400&text=image" }

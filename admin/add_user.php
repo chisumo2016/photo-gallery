@@ -9,13 +9,16 @@
     if (isset($_POST['create'])){
      if ($user){
 
-         //Assign to object property
-            $user-> username          =   $_POST['username '];
-            $user-> first_name        =   $_POST['first_name '];
-            $user-> last_name         =   $_POST['last_name'];
-            $user-> password          =   $_POST['password'];
+         var_dump($user);
 
-            $user->save();
+         //Assign to object property
+            $user->username          =   $_POST['username'];
+            $user->first_name        =   $_POST['first_name'];
+            $user->last_name         =   $_POST['last_name'];
+            $user->password          =   $_POST['password'];
+
+            $user->set_file($_FILES['user_image']);
+            $user->save_user_image();
 
         }
 
@@ -53,7 +56,6 @@
                                 <input
                                         type="file"
                                         class="form-control"
-                                        id="user_image"
                                         name="user_image">
                             </div>
 
@@ -62,7 +64,6 @@
                                 <input
                                         type="text"
                                         class="form-control"
-                                        id="username"
                                         name="username"
                                         placeholder="Enter Username">
                             </div>
@@ -71,7 +72,6 @@
                                 <input
                                         type="text"
                                         class="form-control"
-                                        id=""
                                         name="first_name"
                                         placeholder="Enter First Name">
                             </div>
@@ -81,7 +81,6 @@
                                 <input
                                         type="text"
                                         class="form-control"
-                                        id=""
                                         name="last_name"
                                         placeholder="Enter Last Name">
                             </div>
@@ -91,7 +90,6 @@
                                 <input
                                         type="password"
                                         class="form-control"
-                                        id=""
                                         name="password"
                             </div>
                             <div class="form-group">

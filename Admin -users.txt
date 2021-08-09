@@ -32,7 +32,11 @@ Creating Add User Page Part # 2 : Testing
 - add a button to submit the data
 
 Assigning POST values to Object Properties
--assign the properties
+-assign the properties in user file (UI)
+
+Setting Up Image Upload for User
+- Temporary to the parmanent location
+-Copy the code from user class to upload /setfile and save method to user class
 
 
 
