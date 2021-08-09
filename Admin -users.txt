@@ -31,6 +31,9 @@ Creating Add User Page Part # 1
 Creating Add User Page Part # 2 : Testing
 - add a button to submit the data
 
+Assigning POST values to Object Properties
+-assign the properties
+
 
 
 

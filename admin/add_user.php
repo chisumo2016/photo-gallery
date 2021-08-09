@@ -4,22 +4,20 @@
 <?php
 
 
-    //$user = User::find_by_id($_GET['id']);
+    $user = new User();
 
     if (isset($_POST['create'])){
-        echo "add";
+     if ($user){
 
-//     if ($user){
-//
-//         //Assign to object property
-//            $user-> title          =   $_POST['title'];
-//            $user-> caption        =   $_POST['caption'];
-//            $user-> description    =   $_POST['description'];
-//            $user-> alternative_text =   $_POST['alternative_text'];
-//
-//            $user->save();
-//
-//        }
+         //Assign to object property
+            $user-> username          =   $_POST['username '];
+            $user-> first_name        =   $_POST['first_name '];
+            $user-> last_name         =   $_POST['last_name'];
+            $user-> password          =   $_POST['password'];
+
+            $user->save();
+
+        }
 
 }
 
@@ -49,6 +47,15 @@
                     </h1>
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="col-md-6 col-md-offset-3">
+
+                            <div class="form-group">
+                                <label for="username">Avatar</label>
+                                <input
+                                        type="file"
+                                        class="form-control"
+                                        id="user_image"
+                                        name="user_image">
+                            </div>
 
                             <div class="form-group">
                                 <label for="username">Username</label>
