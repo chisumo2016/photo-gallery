@@ -18,3 +18,27 @@ Displaying User Page
         public  $image_placeholder ="http://placehold.it/400x400&text=image";
  -Create a method for photo in user class
  -Add the method top display the image in user file
+
+Creating User Image Column in DB Table
+-add the column in the database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
