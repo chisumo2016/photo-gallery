@@ -15,3 +15,30 @@ Creating the Comment Class
 -use user class and save as comment
 -create a method  which can take id and instatioante
 -Assign the to object
+
+ Self Instantiation Comment Method
+  - build the create_comment method
+  -Pass parameter  and assign the value
+  - Instantiation  the comment with self
+
+ Find Comments Method
+ -to allow to find the comment to the related photo_id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
