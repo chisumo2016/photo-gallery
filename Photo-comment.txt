@@ -46,6 +46,12 @@ Pulling Data From Form Part # 2
 Displaying & Making Comments - FRONT-END
 -Some bugs wait to be fixed
 
+Displaying & Making Comments - BACK-END
+Display the all the comments and add button
+
+Deleting Comments
+-implement the delete functionality in admin area of the comment
+
 
 
 

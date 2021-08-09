@@ -5,14 +5,13 @@ Class Comment  extends  Db_object {
     //static properties
     protected static  $db_table ="comments";
     protected static $db_table_fields = [
-        'id',
         'photo_id',
         'author',
         'body',
     ];
 
     // properties
-    public int $id;
+    public  $id;
     public  $photo_id;
     public $author;
     public  $body;

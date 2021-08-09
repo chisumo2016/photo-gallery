@@ -2,7 +2,8 @@
 
 <?php if (!$session->is_signed_in()){redirect("login.php");} ?>
 <?php
-$comments = Comment::find_all();
+        $comments = Comment::find_all();
+
 ?>
 
 
@@ -34,22 +35,21 @@ $comments = Comment::find_all();
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Photo ID</th>
                                 <th>Author</th>
                                 <th>Body</th>
-                                <th>Action</th>
+
                             </tr>
                             </thead>
                             <tbody>
                             <?php
-                            foreach ($comments as $comment): ?>
+                            foreach ($comments  as $comment): ?>
                                 <tr>
                                     <td><?php echo $comment->id; ?></td>
                                     <td>
                                         <?php echo  $comment->author; ?>
                                         <div class="action_links">
                                             <a href="delete_comment.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-danger">Delete</a>
-                                            <a href="edit_comment.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-warning">Edit</a>
+                                            <a href="edit_comment.php?id=<?php echo   $comment->id; ?>" class="btn btn-xs btn-warning">Edit</a>
                                         </div>
                                     </td>
                                     <td><?php echo  $comment->body; ?></td>

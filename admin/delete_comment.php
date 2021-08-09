@@ -4,20 +4,20 @@
 <?php
 
  if (empty($_GET['id'])){
-     redirect("users.php");
+     redirect("comments.php");
  }
 
  //Find the id
- $user = User::find_by_id($_GET['id']);
- if ($user){
+ $comment = Comment::find_by_id($_GET['id']);
+ if ($comment){
 
-     $user->delete();
+     $comment->delete();
 
      //refresh
-     redirect("users.php");
+     redirect("comments.php");
  }else{
 
-     redirect("users.php");
+     redirect("comments.php");
  }
 
 
