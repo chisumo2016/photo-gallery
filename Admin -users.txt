@@ -22,6 +22,11 @@ Displaying User Page
 Creating User Image Column in DB Table
 -add the column in the database
 
+Delete Users
+ - reuse the same method in  delete_photo in photo
+
+Creating Add User Page Part # 1
+-create a button to add a user
 
 
 
