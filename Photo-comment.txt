@@ -27,7 +27,11 @@ Creating the Comment Class
 
 Testing our Comment Form
 -test the comment method
--let us go to photo.php
+-let us go to photo.php in front end
+
+ Including Our Classes in Photo.php FRONT-END
+ -bring the init file to front end
+  /photo.php?id=7
 
 
 
