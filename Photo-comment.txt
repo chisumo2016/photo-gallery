@@ -1,0 +1,17 @@
+PHOTO COMMENTS
+ Displaying All Comments
+ Display Specific Photo Comments
+ Comments CRUD
+ Relating a   comment to the photo
+
+ RELATIONSHIP WITH OPP PHP
+
+Creating the Comments Table in the Database
+-Build the comment table in db
+-Photo can have many comments
+Add field
+
+Creating the Comment Class
+-use user class and save as comment
+-create a method  which can take id and instatioante
+-Assign the to object
