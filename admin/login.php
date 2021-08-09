@@ -44,7 +44,6 @@ if(isset($_POST['submit'])) {
                     class="form-control"
                     name="username"
                     value="<?php echo htmlentities($username); ?>" >
-
         </div>
 
         <div class="form-group">
@@ -54,7 +53,6 @@ if(isset($_POST['submit'])) {
                     class="form-control"
                     name="password"
                     value="<?php echo htmlentities($password); ?>">
-
         </div>
 
         <div class="form-group">

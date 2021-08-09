@@ -28,3 +28,4 @@ Installing The Text Editor
 
  Setting Size for Photos Page Thumbnail
  -You might encounter  with the image to become very images
+ -Add the css styles in  photos page

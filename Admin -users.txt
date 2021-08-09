@@ -1,0 +1,7 @@
+ADMIN USERS
+ -Displaying Users
+ -Placeholder Images
+ -User CRUD
+
+Displaying User Page
+ -Copy the code from photo.php and repaste to user file in admin
