@@ -4,6 +4,7 @@ class  Db_object{
 
     protected static  $db_table ="users";
 
+    public  $errors               = [];  //customs errors
     public  $upload_errors_array  =
         [
             UPLOAD_ERR_OK            => "There is no error, the file uploaded with success.",
@@ -166,6 +167,31 @@ class  Db_object{
 
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
+
+    //This is p$_FILES['uploaded_file'] as an argument
+    public  function  set_file($file)
+    {
+        //Error checking if the file is uploaded
+        if (empty($file) || !$file || !is_array($file)){
+            $this->errors[]  = "There was no file uploaded here";
+            return false;
+
+            //check if the file has uploded
+        }elseif($file['errors'] != 0){
+
+            $this->errors[] = $this->upload_errors_array[$file['error']];
+            return  false;
+
+        }else {
+            //assign
+            $this->user_image     = basename($file['name']);
+            $this->tmp_path     = $file['tmp_name'];
+            $this->type         = $file['type'];
+            $this->size         = $file['size'];
+        }
+
+    }
+
 
 
 }

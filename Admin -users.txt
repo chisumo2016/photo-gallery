@@ -58,7 +58,9 @@ Updating User Modification
 -We're updating the name not an image
 -we to detect if its empty and save
 
-
+Delete within Edit User Page
+-create a button to delete the image to the user
+-Move the set_file($file) to db_object class
 
 
 
