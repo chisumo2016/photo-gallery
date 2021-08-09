@@ -40,6 +40,11 @@ Setting Up Image Upload for User
 
 Creating The User Edit Page
 -add the edit user page in admin
+-Ad the functionality in edit page by checking the user id and instantiated
+
+ Updating User
+ -update functionality
+ -Move the errors code from photo class to DB_Object
 
 
 

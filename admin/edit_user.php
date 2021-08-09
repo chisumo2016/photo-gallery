@@ -51,10 +51,13 @@ $user = User::find_by_id($_GET['id']);
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Add New User
+                       Edit User
                     </h1>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="<?php echo $user->image_path_placeholder();?>" alt="">
+                    </div>
                     <form action="" method="post" enctype="multipart/form-data">
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-6">
 
                             <div class="form-group">
                                 <label for="username">Avatar</label>
@@ -70,6 +73,7 @@ $user = User::find_by_id($_GET['id']);
                                         type="text"
                                         class="form-control"
                                         name="username"
+                                        value="<?php echo $user->username; ?>"
                                         placeholder="Enter Username">
                             </div>
                             <div class="form-group">
@@ -78,6 +82,7 @@ $user = User::find_by_id($_GET['id']);
                                         type="text"
                                         class="form-control"
                                         name="first_name"
+                                        value="<?php echo $user->first_name; ?>"
                                         placeholder="Enter First Name">
                             </div>
 
@@ -87,6 +92,7 @@ $user = User::find_by_id($_GET['id']);
                                         type="text"
                                         class="form-control"
                                         name="last_name"
+                                        value="<?php echo $user->last_name; ?>"
                                         placeholder="Enter Last Name">
                             </div>
 
@@ -102,6 +108,7 @@ $user = User::find_by_id($_GET['id']);
                                         type="submit"
                                         class="btn btn-primary pull-right"
                                         name="update"
+                                        value="update"
                             </div>
                         </div>
                     </form>
