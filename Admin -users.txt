@@ -38,6 +38,8 @@ Setting Up Image Upload for User
 - Temporary to the parmanent location
 -Copy the code from user class to upload /setfile and save method to user class
 
+Creating The User Edit Page
+-add the edit user page in admin
 
 
 
