@@ -21,9 +21,20 @@ $user = User::find_by_id($_GET['id']);
             $user->last_name         =   $_POST['last_name'];
             $user->password          =   $_POST['password'];
 
-            $user->set_file($_FILES['user_image']);
+            //checking if its empty
+         if (empty($_FILES['user_image'])){
+              //save the image
+             $user->save();
 
-            $user->save_user_image();
+         } else {
+             $user->set_file($_FILES['user_image']);
+
+             $user->save_user_image();
+
+             $user->save();
+
+             redirect("edit_user.php?id={$user->id}");
+         }
 
         }
 

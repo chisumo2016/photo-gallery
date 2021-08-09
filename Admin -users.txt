@@ -48,9 +48,15 @@ Creating The User Edit Page
 
  Empty Password Field Fix
  -we dont want to see the empty in the input of edit user
- -
+ -add the value=<?php echo $user->password?>
 
-
+Updating User Modification
+-if u go to view users
+-The edit the user information once you select new image you get an empty image
+-The problem its in the user class save_user_image()
+-on above method we check an if exist and we're updating the name not the image to the server
+-We're updating the name not an image
+-we to detect if its empty and save
 
 
 

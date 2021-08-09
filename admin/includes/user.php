@@ -71,10 +71,6 @@ Class User  extends  Db_object {
 
     public  function  save_user_image()
     {
-        //error checking
-        if ($this->id){
-            $this->update();
-        }else{
             if (!empty($this->errors)){
                 return false;
             }
@@ -104,6 +100,5 @@ Class User  extends  Db_object {
                 return false;
             }
         }
-    }
 
 }
