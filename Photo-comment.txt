@@ -57,7 +57,9 @@ Creating the Individual Comment Page Part # 1
 -add a link to view photo
 -Check if the id  empty then redirect to photos.php
 
-
+Creating the Individual Comment Page Part # 2
+-find the comment
+-add the link in photo
 
 
 
