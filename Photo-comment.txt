@@ -23,8 +23,11 @@ Creating the Comment Class
 
  Find Comments Method
  -to allow to find the comment to the related photo_id
+ -Add the method to find_comment by photo id
 
-
+Testing our Comment Form
+-test the comment method
+-let us go to photo.php
 
 
 
