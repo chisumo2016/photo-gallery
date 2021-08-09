@@ -8,7 +8,7 @@
   }
 
   $photo  = Photo::find_by_id($_GET['id']);
-  echo $photo->title;
+
 
   if(isset($_POST['submit'])){
     $author = trim($_POST['author']);
@@ -158,10 +158,10 @@
                     <img class="media-object" src="http://placehold.it/64x64" alt="">
                 </a>
                 <div class="media-body">
-                    <h4 class="media-heading"><?php  $comment->author;?>>
+                    <h4 class="media-heading"><?php  echo $comment->author;?>>
                         <small>August 25, 2014 at 9:30 PM</small>
                     </h4>
-                    <?php  $comment->body;?>>
+                    <?php  echo $comment->body;?>>
                 </div>
             </div>
             <?php endforeach; ?>
