@@ -63,10 +63,13 @@
                                               <td><?php echo  $photo->type; ?></td>
                                               <td><?php echo  $photo->size; ?></td>
                                               <td>
-                                                  <?php
-                                                         $comments = Comment::find_the_comments($photo->id);
+                                                  <a href="comment_photo.php?id=<?php echo $photo->id;?>">
+
+                                                          <?php
+                                                             $comments = Comment::find_the_comments($photo->id);
                                                              echo  count($comments);
-                                                        ?>
+                                                             ?>
+                                                  </a>
                                               </td>
                                           </tr>
                                   <?php endforeach; ?>

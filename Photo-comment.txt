@@ -65,6 +65,9 @@ Creating the Count Comment Code and CHALLENGE
 -missing the link
 -co
 
+Comment Count Link & SOLUTION
+-photos php and make anchor tag
+
 
 
 
