@@ -39,7 +39,9 @@ Pulling Data From Form Part # 1
 -call the method to create   comment
 -save and redirect
 
-
+Pulling Data From Form Part # 2
+-what if we cant find an object?
+-set a message
 
 
 

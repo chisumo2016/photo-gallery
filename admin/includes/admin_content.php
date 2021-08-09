@@ -8,11 +8,6 @@
                 <small>Subheading</small>
             </h1>
 
-            <?php
-                $photo = Photo::find_by_id(7);
-                echo $photo->filename;
-            ?>
-
             <ol class="breadcrumb">
                 <li>
                     <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
