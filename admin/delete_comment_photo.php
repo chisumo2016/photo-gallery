@@ -16,7 +16,7 @@
      $session->message("The comment with {$comment->id} has been deleted");
 
      //refresh
-     redirect("comments.php");
+     redirect("comment_photo.php?id={$comment->photo_id}");
  }else{
 
      redirect("comments.php");

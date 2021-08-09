@@ -68,6 +68,10 @@ Creating the Count Comment Code and CHALLENGE
 Comment Count Link & SOLUTION
 -photos php and make anchor tag
 
+Deleting Specific Photo Comments Code
+-Delete the comment on that photo eg delete_comment_photo.php
+-Once you delete will stay on the same page
+
 
 
 

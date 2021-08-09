@@ -52,7 +52,7 @@
                                     <td>
                                         <?php echo  $comment->author; ?>
                                         <div class="action_links">
-                                            <a href="delete_comment.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-danger">Delete</a>
+                                            <a href="delete_comment_photo.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-danger">Delete</a>
                                             <a href="edit_comment.php?id=<?php echo   $comment->id; ?>" class="btn btn-xs btn-warning">Edit</a>
                                         </div>
                                     </td>
