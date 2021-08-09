@@ -33,7 +33,11 @@ Testing our Comment Form
  -bring the init file to front end
   /photo.php?id=7
 
-
+Pulling Data From Form Part # 1
+-assign value to an object
+-call the comment static
+-call the method to create   comment
+-save and redirect
 
 
 
