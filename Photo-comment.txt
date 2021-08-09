@@ -43,6 +43,8 @@ Pulling Data From Form Part # 2
 -what if we cant find an object?
 -set a message
 
+Displaying & Making Comments - FRONT-END
+-Some bugs wait to be fixed
 
 
 
