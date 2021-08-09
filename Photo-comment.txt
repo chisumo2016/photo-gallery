@@ -52,6 +52,13 @@ Display the all the comments and add button
 Deleting Comments
 -implement the delete functionality in admin area of the comment
 
+Creating the Individual Comment Page Part # 1
+-create the page which show the specific comment for specific photo
+-add a link to view photo
+-Check if the id  empty then redirect to photos.php
+
+
+
 
 
 
