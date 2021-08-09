@@ -13,16 +13,16 @@ Class Comment  extends  Db_object {
 
     // properties
     public int $id;
-    public int $photo_id;
-    public string $author;
-    public string $body;
+    public  $photo_id;
+    public $author;
+    public  $body;
 
  public  static   function  create_comment($photo_id,$author="John",$body="")
  {
      if (!empty($photo_id) && !empty($author) && !empty($body)){
 
          $comment = new Comment();
-         $comment ->photo_id    = $photo_id;
+         $comment ->photo_id    = (int)$photo_id;
          $comment ->author      = $author;
          $comment ->body        = $body;
 

@@ -7,6 +7,11 @@
                 Admin
                 <small>Subheading</small>
             </h1>
+            <?php
+
+
+
+            ?>
 
             <ol class="breadcrumb">
                 <li>
