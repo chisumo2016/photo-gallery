@@ -101,14 +101,16 @@ $user = User::find_by_id($_GET['id']);
                                 <input
                                         type="password"
                                         class="form-control"
-                                        name="password"
+                                        value="<?php echo $user->password;?>"
+                                        name="password">
                             </div>
                             <div class="form-group">
+                                <a id="user-id" href="delete_user.php?id=<?php $user->id;?>" class="btn btn-danger">Delete</a>
                                 <input
                                         type="submit"
                                         class="btn btn-primary pull-right"
                                         name="update"
-                                        value="update"
+                                        value="update">
                             </div>
                         </div>
                     </form>

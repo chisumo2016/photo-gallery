@@ -46,6 +46,10 @@ Creating The User Edit Page
  -update functionality
  -Move the errors code from photo class to DB_Object
 
+ Empty Password Field Fix
+ -we dont want to see the empty in the input of edit user
+ -
+
 
 
 
