@@ -7,3 +7,6 @@ Setting Up our Pagination Variables
 -Page Variable
 -how many item
 -total count
+
+ Creating the Paginate CLASS
+  -create a class Paginate inside admin/includes
