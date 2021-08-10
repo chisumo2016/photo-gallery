@@ -28,6 +28,13 @@ Building our Paginate Class Methods Part # 2
 -has_next()
 -Offset w/c will skip the page .will give the next 10
 
+Instantiating and Testing Paginate
+-in the index page
+-Add the  class into init file  - autoload class function
+-create a customs sql , remove the $photos = Photo :: find_all();
+
+http://localhost:8888/gallery_application/index.php?page=2
+
 
 
 

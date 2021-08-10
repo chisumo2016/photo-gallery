@@ -14,6 +14,7 @@ require_once ("user.php");
 require_once (__DIR__ . DS . "photo.php");
 require_once ("comment.php");
 require_once ("Session.php");
+require_once ("paginate.php");
 
 
 

@@ -7,7 +7,17 @@
 
     $items_total_count = Photo::count_all();
 
-     $photos = Photo :: find_all();
+    $paginate = new Paginate($page,$items_per_page,$items_total_count);
+
+    //Build sql
+
+    $sql = "SELECT * FROM photos ";
+    $sql .= "LIMIT {$items_per_page} ";
+    $sql .= "OFFSET {$paginate->offset()}";
+    $photos = Photo::find_by_query($sql);
+
+
+     //$photos = Photo :: find_all();
 ?>
 
         <div class="row">
