@@ -4,6 +4,7 @@
 
 // Including Our classes in photo FRONT END
 require_once("admin/includes/init.php");
+
 if(empty($_GET['id'])){
 
     redirect("index.php");

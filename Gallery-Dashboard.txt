@@ -7,3 +7,7 @@ Gallery Dashboard
 
 Dynamic Menu to Photo.php
 -look like index
+-modified the code in photo file in front end
+
+Dashboard HTML Snippets Inclusion
+-Go to admin-content in dashboard and take off
