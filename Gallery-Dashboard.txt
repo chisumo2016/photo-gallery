@@ -1,0 +1,9 @@
+Gallery Dashboard
+    Views Count
+    Users Count
+    Comments Count
+    Photo Count
+    Google API
+
+Dynamic Menu to Photo.php
+-look like index

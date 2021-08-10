@@ -1,9 +1,10 @@
-
+<?php ob_start(); ?>
 <?php
 
-defined('DS')? NULL : define('DS', DIRECTORY_SEPARATOR) ; //  Example /
-define('SITE_ROOT', DS . 'Applications' . DS .  'MAMP' . DS . 'htdocs' . DS . 'gallery_application'); //  site root
-defined('INCLUDES_PATH')? NULL : define('INCLUDES_PATH', SITE_ROOT .DS. 'admin' .DS. 'includes'); //  Includes folder from admin
+defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR) ; //  Example /
+define('SITE_ROOT', DS . 'Applications' . DS . 'MAMP' . DS . 'htdocs' . DS . 'gallery_application'); //  site root
+defined('INCLUDES_PATH') ? null : define('INCLUDES_PATH', SITE_ROOT .DS. 'admin' .DS. 'includes'); //  Includes folder from admin
+defined('IMAGES_PATH')? null :define('IMAGES_PATH',SITE_ROOT.DS.'admin'.DS.'images');
 
 require_once ("functions.php");
 require_once("new_config.php");

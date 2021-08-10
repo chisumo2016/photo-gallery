@@ -4,7 +4,7 @@ Class Comment  extends  Db_object {
 
     //static properties
     protected static  $db_table ="comments";
-    protected static $db_table_fields = [
+    protected static  $db_table_fields = [
         'photo_id',
         'author',
         'body',
@@ -13,14 +13,17 @@ Class Comment  extends  Db_object {
     // properties
     public  $id;
     public  $photo_id;
-    public $author;
+    public  $author;
     public  $body;
 
- public  static   function  create_comment($photo_id,$author="John",$body="")
+ public  static   function  create_comment($photo_id, $author="John",$body="")
  {
      if (!empty($photo_id) && !empty($author) && !empty($body)){
 
+         //Instantiated
          $comment = new Comment();
+
+         //Assign the value to object
          $comment ->photo_id    = (int)$photo_id;
          $comment ->author      = $author;
          $comment ->body        = $body;
@@ -31,7 +34,7 @@ Class Comment  extends  Db_object {
      }
  }
 
- public  static  function  find_the_comments($photo_id=0)
+ public  static  function  find_the_comments($photo_id=0) //related to photo id
  {
      global $database;
 

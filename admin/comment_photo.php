@@ -31,8 +31,7 @@
                     <h1 class="page-header">
                         View Comments
 
-                    </h1>
-                    <a href="add_comment.php" class="btn btn-primary">Add New Comment</a>
+                    </h1
 
                     <div class="col-md-12">
                         <table class="table table-hover">
