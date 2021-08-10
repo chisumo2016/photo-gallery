@@ -28,3 +28,8 @@ Tracking Page Views Method
 -Make the session of visitor count  to be available to our system by calling in the constructor
   $this->visitor_count();
   -call the session in dashboard
+
+
+Creating the Count All Method and Echoing Photo Count
+-to count how photo we have
+-db_object class and add the count_all() to count the photo
