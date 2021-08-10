@@ -20,3 +20,26 @@ Building our Paginate Class Methods Part # 1
 -will help to build our method which will help us to paginate
 -next()
 -previous()
+-page_total()
+
+Building our Paginate Class Methods Part # 2
+-we need to write a method which will detect the next or previous
+-has_previous()
+-has_next()
+-Offset w/c will skip the page .will give the next 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
