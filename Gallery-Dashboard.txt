@@ -30,6 +30,9 @@ Tracking Page Views Method
   -call the session in dashboard
 
 
-Creating the Count All Method and Echoing Photo Count
+Created the Count All Method and Echoing Photo Count
 -to count how photo we have
 -db_object class and add the count_all() to count the photo
+
+Setting Up Users and Comment Countt
+-count for users
