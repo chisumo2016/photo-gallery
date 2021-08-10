@@ -15,3 +15,8 @@ Setting Up our Pagination Variables
 
 Creating our Construct Function to Initialize some Properties
  - assign the value to the object  (automatically)
+
+Building our Paginate Class Methods Part # 1
+-will help to build our method which will help us to paginate
+-next()
+-previous()
