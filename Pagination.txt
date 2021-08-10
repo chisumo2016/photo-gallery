@@ -1,0 +1,9 @@
+PAGINATION
+-Building in object oop
+-Build a Class
+
+Setting Up our Pagination Variables
+-keep track our data for pagination
+-Page Variable
+-how many item
+-total count
