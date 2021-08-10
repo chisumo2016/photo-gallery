@@ -28,7 +28,7 @@
                         View Comments
 
                     </h1>
-                    <a href="add_comment.php" class="btn btn-primary">Add New Comment</a>
+<!--                    <a href="add_comment.php" class="btn btn-primary">Add New Comment</a>-->
 
                     <div class="col-md-12">
                         <table class="table table-hover">

@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="photo.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Total Photos in Gallery</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="user.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Total Users</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -94,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="comment.php">
                             <div class="panel-footer">
                                 <span class="pull-left">Total Comments</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

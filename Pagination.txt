@@ -58,7 +58,8 @@ Pagination Indication CSS
 -Type of color change
 -You can change from pager tp pagination
 
-
+CLEANING UP
+-remove link to Add the comment
 
 
 
