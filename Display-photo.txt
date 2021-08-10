@@ -1,0 +1,2 @@
+Setting Up Index to Display Photos Part # 1
+ Go to front header file and add init

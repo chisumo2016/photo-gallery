@@ -1,43 +1,36 @@
-
 <?php include("includes/header.php"); ?>
 <?php
-
-// Including Our classes in photo FRONT END
 require_once("admin/includes/init.php");
 
-if(empty($_GET['id'])){
+if (empty($_GET['id'])){
 
     redirect("index.php");
 }
-$photo = Photo::find_by_id($_GET['id']) ;
-//echo $photo->title;
+
+$photo  = Photo::find_by_id($_GET['id']);
+
 if(isset($_POST['submit'])){
+    $author = trim($_POST['author']);
+    $body  =  trim($_POST['author']);
 
-    // Pulling Data from Form
+    $new_comment = Comment::create_comment($photo->id,$author, $body);
 
-    $author =trim($_POST['author']) ;
-    $body = trim($_POST['body']);
+    if ($new_comment && $new_comment->save()){
 
-    $new_comment =Comment::create_comment($photo->id,$author,$body);
-    if($new_comment &&$new_comment ->save()){// checking new comments
         redirect("photo.php?id={$photo->id}");
     }else{
-
         $message = "There was some problems saving";
     }
-
 }else{
-
-    $author ="";
-    $body= "";
+    $author = "";
+    $body   = "";
 }
-// Display Making comments -Front End loop
-$comments = Comment ::find_the_comments($photo->id);
+
+$comments = Comment::find_the_comments($photo->id);
 
 ?>
-
 <div class="row">
-    <div class="col-lg-12 ">
+    <div class="col-lg-12">
 
         <!-- Blog Post -->
 
@@ -52,7 +45,7 @@ $comments = Comment ::find_the_comments($photo->id);
         <hr>
 
         <!-- Date/Time -->
-        <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+        <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2030 at 9:00 PM</p>
 
         <hr>
 
@@ -63,12 +56,14 @@ $comments = Comment ::find_the_comments($photo->id);
 
         <!-- Post Content -->
         <p class="lead"><?php echo $photo->caption; ?></p>
-        <?php echo $photo->description; ?>
+        <p><?php echo $photo->description; ?></p>
+
         <hr>
 
         <!-- Blog Comments -->
 
         <!-- Comments Form -->
+
 
 
         <div class="well">
@@ -78,7 +73,6 @@ $comments = Comment ::find_the_comments($photo->id);
                     <label for="author">Author</label>
                     <input type="text" name="author" class="form-control">
                 </div>
-
                 <div class="form-group">
                     <textarea name="body" class="form-control" rows="3"></textarea>
                 </div>
@@ -92,8 +86,8 @@ $comments = Comment ::find_the_comments($photo->id);
 
 
 
-        <!-- Display Making Comments  -->
         <?php foreach ($comments as $comment): ?>
+
 
             <!-- Comment -->
             <div class="media">
@@ -102,29 +96,26 @@ $comments = Comment ::find_the_comments($photo->id);
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading"><?php echo $comment->author; ?>
-                        <small>January 25, 2021 at 9:30 PM</small>
+                        <small>August 25, 2030 at 9:30 PM</small>
                     </h4>
-
                     <?php echo $comment->body; ?>
-                    <!-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. -->
                 </div>
             </div>
 
+
         <?php endforeach; ?>
+
 
 
     </div>
 
 
 
-
     <!-- Blog Sidebar Widgets Column -->
-
-    <!-- Blog Sidebar Widgets Column -->
-    <!-- <div class="col-md-4"> -->
+    <!--     <div class="col-md-4"> -->
 
 
-    <?php// include("includes/sidebar.php"); ?>
+    <?php // include("includes/sidebar.php"); ?>
 
 
 
@@ -134,4 +125,7 @@ $comments = Comment ::find_the_comments($photo->id);
 </div>
 
 <?php include("includes/footer.php"); ?>
+
+
+
 
