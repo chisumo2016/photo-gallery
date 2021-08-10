@@ -35,7 +35,9 @@ Instantiating and Testing Paginate
 
 http://localhost:8888/gallery_application/index.php?page=2
 
-
+ Setting Up our Next Page Link
+ -link to go the next page or previous
+ -Build  inside the index.php
 
 
 
