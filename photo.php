@@ -117,8 +117,6 @@ $comments = Comment::find_the_comments($photo->id);
 
     <?php // include("includes/sidebar.php"); ?>
 
-
-
     <!-- </div> -->
     <!-- /.row -->
 

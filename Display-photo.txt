@@ -2,5 +2,15 @@ Setting Up Index to Display Photos Part # 1
  Go to front header file and add init
 <?php require_once("admin/includes/init.php"); ?>
 -Building UI to display the photo
+-Loop through using foreach
 
-Setting Up Index to Display Photos Part # 1
+Setting Up Index to Display Photos Part # 2
+Display the images
+
+Correcting Photos Alignment with CSS
+-play around with
+-Add width and height
+
+ Coding the PHP in Photo.php FRON-END
+ -add the link
+ -To go on specific photo in index.php
