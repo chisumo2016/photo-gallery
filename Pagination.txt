@@ -47,6 +47,10 @@ http://localhost:8888/gallery_application/index.php?page=2
 Creating Previous Link - SOLUTION
 -go to the previous
 
+Paginate Indication and Looping
+- Show the number like googles
+-create the loop  and keep tracking
+
  <li class='previous'><a href=''>Previous</a></li>
 
 
