@@ -11,3 +11,10 @@ Dynamic Menu to Photo.php
 
 Dashboard HTML Snippets Inclusion
 -Go to admin-content in dashboard and take off
+
+
+Adding Google API Charts
+-goople api
+-get getting dynamic information
+-google https://developers.google.com/chart
+https://developers.google.com/chart/interactive/docs/gallery/piechart
