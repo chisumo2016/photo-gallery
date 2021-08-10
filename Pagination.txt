@@ -50,6 +50,23 @@ Creating Previous Link - SOLUTION
 Paginate Indication and Looping
 - Show the number like googles
 -create the loop  and keep tracking
+-Implemented the paginate Indicator and looping it to show the active and inactive class in index page
+
+Pagination Indication CSS
+- Write the code tpo show the active
+-Done in css
+-Type of color change
+-You can change from pager tp pagination
+
+
+
+
+
+
+
+
+
+
 
  <li class='previous'><a href=''>Previous</a></li>
 
