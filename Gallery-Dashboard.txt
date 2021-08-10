@@ -34,5 +34,21 @@ Created the Count All Method and Echoing Photo Count
 -to count how photo we have
 -db_object class and add the count_all() to count the photo
 
-Setting Up Users and Comment Countt
+Setting Up Users and Comment Count
 -count for users
+-Count for comments
+-We gonna use the same method in the db_object  count_all()
+
+
+Modifying Chart Properties
+-to go to footer.php in admin
+ var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Work',     11],
+              ['Eat',      2],
+              ['Commute',  2],
+              ['Watch TV', 2],
+              ['Sleep',    7]
+          ]);
+
+          TO

@@ -17,15 +17,18 @@
       function drawChart() {
           var data = google.visualization.arrayToDataTable([
               ['Task', 'Hours per Day'],
-              ['Work',     11],
-              ['Eat',      2],
+              ['Vistors',     <?php echo $session->count;?>],
+              ['Eat',      <?php echo    $session->count;?>],
               ['Commute',  2],
               ['Watch TV', 2],
               ['Sleep',    7]
           ]);
 
           var options = {
+              legend:'none',
+              pieSliceText: 'label',
               title: 'My Daily Activities',
+              backgroundColor:'transparent'
               is3D: true,
           };
 
