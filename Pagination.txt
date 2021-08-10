@@ -10,3 +10,8 @@ Setting Up our Pagination Variables
 
  Creating the Paginate CLASS
   -create a class Paginate inside admin/includes
+  -add the properties
+  -create a constructor
+
+Creating our Construct Function to Initialize some Properties
+ - assign the value to the object  (automatically)
