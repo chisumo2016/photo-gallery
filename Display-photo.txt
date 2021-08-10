@@ -1,2 +1,6 @@
 Setting Up Index to Display Photos Part # 1
  Go to front header file and add init
+<?php require_once("admin/includes/init.php"); ?>
+-Building UI to display the photo
+
+Setting Up Index to Display Photos Part # 1
