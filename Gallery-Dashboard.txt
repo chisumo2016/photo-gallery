@@ -18,3 +18,13 @@ Adding Google API Charts
 -get getting dynamic information
 -google https://developers.google.com/chart
 https://developers.google.com/chart/interactive/docs/gallery/piechart
+-Attached the script in header files
+-Attached the script in footer files
+-Created a div row add the code .Read the documents
+
+Tracking Page Views Method
+-Go to Session class and create the method eg like visitor count
+-Create a function called visitor_count()
+-Make the session of visitor count  to be available to our system by calling in the constructor
+  $this->visitor_count();
+  -call the session in dashboard

@@ -6,11 +6,13 @@
       private  $signed_in = false;
       public   $user_id; //id
       public   $message;
+      public   $count;
 
      public function  __construct(){
           session_start();
           $this->check_the_login();
           $this->check_message();
+          $this->visitor_count();
 
       }
 
@@ -64,6 +66,15 @@
               unset($_SESSION['message']);
           }else{
               $this->message = "";
+          }
+      }
+
+      public  function  visitor_count()
+      {
+          if (isset($_SESSION['count'])){
+              return $this-> count = $_SESSION['count']++;
+          }else{
+              return  $_SESSION['count'] = 1;
           }
       }
   }
