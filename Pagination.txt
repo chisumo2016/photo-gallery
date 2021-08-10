@@ -41,7 +41,11 @@ http://localhost:8888/gallery_application/index.php?page=2
  -write if to check if it has next page
 
  Putting our Next Link to Work - CHALLENGE
-  -
+  -Put the Next link to be able to move to the next page
+     echo "<li class='next'><a href='index.php?page={$paginate->next()}'>Next</a></li>";
+
+Creating Previous Link - SOLUTION
+-go to the previous
 
  <li class='previous'><a href=''>Previous</a></li>
 
