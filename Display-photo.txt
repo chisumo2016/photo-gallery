@@ -14,3 +14,7 @@ Correcting Photos Alignment with CSS
  Coding the PHP in Photo.php FRON-END
  -add the link
  -To go on specific photo in index.php
+
+ Home Page Link and Footer Modifications
+-center the footer
+-Add link
