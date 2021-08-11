@@ -106,7 +106,26 @@ public  function  message($msg="")
  -set the message method
  -call the session in edit user and delete-user.php
 
+Updating User Methods
+-we need to change the save_user_and_image(): in add_user file
+ add these method
+         $user->upload_photo();
+         $user->save();
+- we dont use anymore
+-we cannot delete from the user , we should the same  method to delete the photo from photo class
+     public  function  delete_photo()
+       {
+           //delete from data from table
+           if ($this->delete()){
+               //delete the file
+               $target_path = SITE_ROOT.DS. 'admin' . DS . $this->picture_path();
 
+              return unlink($target_path) ? true : false;
+
+           }else{
+               return  false;
+           }
+       }
 
 
 

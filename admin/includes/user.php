@@ -97,4 +97,18 @@ Class User  extends  Db_object {
             $this->save(); looping through the object property*/
         }
 
+    public  function  delete_photo()
+    {
+        //delete from data from table
+        if ($this->delete()){
+            //delete the file
+            $target_path = SITE_ROOT.DS. 'admin' . DS . $this->upload_directory . DS . $this->user_image;
+
+            return unlink($target_path) ? true : false;
+
+        }else{
+            return  false;
+        }
+    }
+
 }
