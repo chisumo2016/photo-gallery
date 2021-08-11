@@ -11,6 +11,8 @@
  $user = User::find_by_id($_GET['id']);
  if ($user){
 
+     $session->message("The user {$user->id} has been deleted");
+
      $user->delete();
 
      //refresh

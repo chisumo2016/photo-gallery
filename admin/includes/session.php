@@ -4,9 +4,9 @@
   class Session
   {
       private  $signed_in = false;
-      public   $user_id; //id
-      public   $message;
+      public   $user_id; //i
       public   $count;
+      public   $message;
 
      public function  __construct(){
           session_start();
@@ -48,6 +48,8 @@
           unset($this->user_id);
           $this->signed_in = false;
       }
+
+      //set/get the message
       public  function  message($msg="")
       {
           if (!empty($msg)){

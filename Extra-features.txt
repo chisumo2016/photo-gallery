@@ -74,6 +74,41 @@ Photo Library Sidebar Part #3 - COMPLETED
 -concatinate the variables
 
 
+Creating Session Methods for Notifications in the Edit User Page Part # 1
+-we should go to user once we update the user
+-We should have message on session ,eg if you delete or update the user
+ private  function check_message()
+      {
+          if (isset($_SESSION['message'])){
+              unset($_SESSION['message']);
+          }else{
+              $this->message = "";
+          }
+      }
+-write the function to get the message get the message
+
+public  function  message($msg="")
+      {
+          if (!empty($msg)){
+
+              $_SESSION['message'] = $msg;
+
+          }else{
+
+              return $this->message;
+          }
+      }
+
+-set the message $message = $session->message();
+
+ Creating Session Methods for Notifications in the Edit User Page Part # 2
+ -To go user php file redirect to user redirect("users.php");
+ -set the message method
+ -call the session in edit user and delete-user.php
+
+
+
+
 
 
 
