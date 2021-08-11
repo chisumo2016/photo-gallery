@@ -33,7 +33,6 @@ $(document).ready(function() {
         image_href_splitted = image_src.split("/");//array
         image_name =image_href_splitted[image_href_splitted.length - 1]; //get the value
 
-        alert(image_name);
     });
 
     $("#set_user_image").click(function () {
@@ -44,7 +43,7 @@ $(document).ready(function() {
             success:function (data) {
                 if (!data.error){
 
-                    alert(data);
+                    location.reload(true);
                 }
             }
         });

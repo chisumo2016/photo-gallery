@@ -51,6 +51,29 @@ Testing our AJAX Code
 - we need to write the ajax_code.php inside our admin include folder
 -catch the value via super global
 
+Creating the AJAX PHP Method
+- customs method inside user class called ajax_save_user_image
+-Make the call to ajax_code file
+-Instantiate User
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
