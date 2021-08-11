@@ -132,6 +132,13 @@ Setting Up Notifications for CRUD Part #1
 -Add the message to all CRUD
 
 
+Installing a Multiple Upload and Drop JS File Plugin Part #1
+ -we should go to upload
+ -we can upload multiple pic
+ - we could make an array but we i can use plugin
+ - we can use dropzone plugin  https://www.dropzonejs.com/
+
+
 
 
 
