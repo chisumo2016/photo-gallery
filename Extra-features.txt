@@ -40,3 +40,6 @@ Pulling User Id with jQuery and Javascript
 -pull the user id
 -Send top server
 
+Pulling Image Name with jQuery and Javascrip
+-pull image name
+
