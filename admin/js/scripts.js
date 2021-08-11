@@ -9,9 +9,6 @@ $(document).ready(function() {
     var image_href_splitted;
     var image_name;
 
-    $('#summernote').summernote({
-        height:300
-    });
 
     //Photo Library
 
@@ -42,12 +39,17 @@ $(document).ready(function() {
             type:"POST",
             success:function (data) {
                 if (!data.error){
-
-                    location.reload(true);
+                    $(".user_image_box a img").prop('src', data);
+                    //location.reload(true);
                 }
             }
         });
 
+    });
+
+
+    $('#summernote').summernote({
+        height:300
     });
 });
 

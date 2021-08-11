@@ -64,7 +64,7 @@ $user = User::find_by_id($_GET['id']);
                     <h1 class="page-header">
                        Edit User
                     </h1>
-                    <div class="col-md-6">
+                    <div class="col-md-6 user_image_box ">
                         <a href="#" data-toggle="modal" data-target="#photo-library">
                             <img class="img-responsive" src="<?php echo $user->image_path_placeholder();?>" alt="">
                         </a>
@@ -119,7 +119,8 @@ $user = User::find_by_id($_GET['id']);
                                         name="password">
                             </div>
                             <div class="form-group">
-                                <a id="user-id" href="delete_user.php?id=<?php $user->id;?>" class="btn btn-danger">Delete</a>
+<!--                                <a id="user-id" href="delete_user.php?id=--><?php //echo $user->id;?><!--" class="btn btn-danger">Delete</a>-->
+                                <a id="user-id" href="delete_user.php?id=<?php echo  $user->id; ?>" class="btn btn-danger" >Delete</a>
 
                                 <input
                                         type="submit"

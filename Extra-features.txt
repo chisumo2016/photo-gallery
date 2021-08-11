@@ -56,6 +56,8 @@ Creating the AJAX PHP Method
 -Make the call to ajax_code file
 -Instantiate User
 
+Modifying / Improving Our AJAX PHP method
+-value are gone because of the save(); in ajax_save_user_image()
 
 
 
