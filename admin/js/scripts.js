@@ -7,7 +7,7 @@ $(document).ready(function() {
     var user_id;
     var image_src;
     var image_href_splitted;
-    var image_id;
+    var image_name;
 
     $('#summernote').summernote({
         height:300
@@ -31,9 +31,23 @@ $(document).ready(function() {
 
         image_src = $(this).prop("src");
         image_href_splitted = image_src.split("/");//array
-        image_id =image_href_splitted[image_href_splitted.length - 1]; //get the value
+        image_name =image_href_splitted[image_href_splitted.length - 1]; //get the value
 
-        alert(image_id);
+        alert(image_name);
+    });
+
+    $("#set_user_image").click(function () {
+        $.ajax({
+            url: "include/ajax_code.php",
+            data:{image_name: image_name, user_id:user_id },
+            type:"POST",
+            success:function (data) {
+                if (!data.error){
+                    alert(image_name);
+                }
+            }
+        });
+
     });
 });
 

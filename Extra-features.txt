@@ -40,6 +40,28 @@ Pulling User Id with jQuery and Javascript
 -pull the user id
 -Send top server
 
-Pulling Image Name with jQuery and Javascrip
+Pulling Image Name with jQuery and Javascript
 -pull image name
+
+Writing the AJAX - Setting User Image
+-The first step was to get the information from user id and image id
+-To click Apply select
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
