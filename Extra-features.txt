@@ -10,4 +10,13 @@ Creating the Modal + HTML Snippets Download
 -Click the image ,show huge pop up window called modal
 -Go to admin.edit-user.php
 -Add a link element sorrounding the image
--customs attribute called data-toggle
+-customs attribute called data-toggle, data-target
+
+Including Modal from somewhere else
+-put Modal somewhere in the includes /called modal
+-You can modal in the boostrap frameworks
+
+Pulling Pictures Into Gallery / Modal
+-Pull the picture inside our photo gallery
+-Let go modal and add init file to get information
+-Find all photos and loop it through
