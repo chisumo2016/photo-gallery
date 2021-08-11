@@ -60,6 +60,8 @@ Pagination Indication CSS
 
 CLEANING UP
 -remove link to Add the comment
+-Add some link in admin dashboard
+
 
 
 

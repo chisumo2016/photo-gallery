@@ -1,0 +1,13 @@
+EXTRA FEATURES
+-Gallery System Improvement
+-Real World Experience
+-Learn new Technology
+-Ajax ,Jquery,,javascript,get information from database
+-Use pop op window
+
+Creating the Modal + HTML Snippets Download
+-Create photo library
+-Click the image ,show huge pop up window called modal
+-Go to admin.edit-user.php
+-Add a link element sorrounding the image
+-customs attribute called data-toggle
