@@ -64,9 +64,10 @@ $user = User::find_by_id($_GET['id']);
                     <h1 class="page-header">
                        Edit User
                     </h1>
-                    <div class="col-md-6 user_image_box ">
+                    <div class="col-md-6 user_image_box">
+
                         <a href="#" data-toggle="modal" data-target="#photo-library">
-                            <img class="img-responsive" src="<?php echo $user->image_path_placeholder();?>" alt="">
+                            <img class ="img-responsive" src="<?php echo $user->image_path_placeholder();?>" alt="">
                         </a>
 
                     </div>

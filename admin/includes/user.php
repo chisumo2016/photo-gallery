@@ -79,22 +79,22 @@ Class User  extends  Db_object {
         public function ajax_save_user_image($user_image, $user_id)
         {
             global  $database;
-
+            //clean the data
             $user_image = $database->escape_string($user_image);
             $user_id    = $database->escape_string($user_id);
-
+            //assign
             $this->user_image = $user_image;
-            $this->id  = $user_id;
+            $this->id         = $user_id;
 
             $sql = "UPDATE ". self::$db_table . " SET user_image = '{$this->user_image}' ";
             $sql .= " WHERE id = {$this->id} ";
             $update_image = $database->query($sql);
 
-           echo $this->image_path_placeholder();
+           echo $this->image_path_placeholder(); //directory and image nane
 
             /*$this->user_image = $user_image;
             $this->id  = $user_id;
-            $this->save();*/
+            $this->save(); looping through the object property*/
         }
 
 }

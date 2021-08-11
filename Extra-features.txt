@@ -58,6 +58,11 @@ Creating the AJAX PHP Method
 
 Modifying / Improving Our AJAX PHP method
 -value are gone because of the save(); in ajax_save_user_image()
+-we have to do SQL ,We habe to use two property
+
+Photo Library Sidebar Part #1 - CHALLENGE INCLUDED
+-responsible for displaying the information
+-we need the photo id in modal  data="<?php echo $photo->id;?>">
 
 
 

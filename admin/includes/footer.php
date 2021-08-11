@@ -34,7 +34,7 @@
               is3D: true,
           };
 
-          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
           chart.draw(data, options);
       }

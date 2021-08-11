@@ -8,6 +8,7 @@ $(document).ready(function() {
     var image_src;
     var image_href_splitted;
     var image_name;
+    var photo_id;
 
 
     //Photo Library
@@ -30,15 +31,33 @@ $(document).ready(function() {
         image_href_splitted = image_src.split("/");//array
         image_name =image_href_splitted[image_href_splitted.length - 1]; //get the value
 
-    });
+        $phot_id = $(this).attr("data");
 
-    $("#set_user_image").click(function () {
         $.ajax({
             url: "includes/ajax_code.php",
             data:{image_name: image_name, user_id:user_id },
             type:"POST",
             success:function (data) {
                 if (!data.error){
+                    //replace source to image
+                    $("#modal_sidebar").html(data);
+
+                }
+            }
+        });
+
+
+    });
+
+    $("#set_user_image").click(function () {
+
+        $.ajax({
+            url: "includes/ajax_code.php",
+            data:{image_name: image_name, user_id:user_id },
+            type:"POST",
+            success:function (data) {
+                if (!data.error){
+                    //replace source to image
                     $(".user_image_box a img").prop('src', data);
                     //location.reload(true);
                 }

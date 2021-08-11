@@ -106,11 +106,11 @@
 
 
             </div> <!--First Row-->
-
         </div>
     </div>
+
     <div class="row">
-        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+        <div id="piechart" style="width: 900px; height: 500px;"></div>
     </div>
     <!-- /.row -->
 
