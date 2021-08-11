@@ -120,6 +120,7 @@ $user = User::find_by_id($_GET['id']);
                             </div>
                             <div class="form-group">
                                 <a id="user-id" href="delete_user.php?id=<?php $user->id;?>" class="btn btn-danger">Delete</a>
+
                                 <input
                                         type="submit"
                                         class="btn btn-primary pull-right"

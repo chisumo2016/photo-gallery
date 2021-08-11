@@ -36,3 +36,7 @@ Enabling the Selection Button with jQuery
 -Once you click the image the button has to be enabled
 -Target the pic with jquery
 
+Pulling User Id with jQuery and Javascript
+-pull the user id
+-Send top server
+
