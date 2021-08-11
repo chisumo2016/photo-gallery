@@ -9,7 +9,7 @@
     if (isset($_POST['create'])){
      if ($user){
 
-         var_dump($user);
+         //var_dump($user);
 
          //Assign to object property
             $user->username          =   $_POST['username'];
@@ -20,7 +20,11 @@
             $user->set_file($_FILES['user_image']);
             ///$user->save_user_image();
             $user->upload_photo();
+
+            $session->message("The User {$user->id} has been added");
+
             $user->save();
+            redirect("users.php");
 
         }
 

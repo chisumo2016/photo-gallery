@@ -127,7 +127,9 @@ Updating User Methods
            }
        }
 
-
+Setting Up Notifications for CRUD Part #1
+-set the session of message
+-Add the message to all CRUD
 
 
 

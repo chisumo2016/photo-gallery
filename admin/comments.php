@@ -26,8 +26,11 @@
                 <div class="col-lg-12">
                     <h1 class="page-header">
                         View Comments
-
                     </h1>
+
+                    <p class="bg-success">
+                        <?php echo $message;?>
+                    </p>
 <!--                    <a href="add_comment.php" class="btn btn-primary">Add New Comment</a>-->
 
                     <div class="col-md-12">

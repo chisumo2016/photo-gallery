@@ -13,7 +13,7 @@
 
      $session->message("The user {$user->id} has been deleted");
 
-     /$user->delete_photo();//Delete both from database and server
+     $user->delete_photo();//Delete both from database and server
      //$user->delete();//from database
 
      //refresh
