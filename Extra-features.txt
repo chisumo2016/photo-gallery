@@ -20,3 +20,13 @@ Pulling Pictures Into Gallery / Modal
 -Pull the picture inside our photo gallery
 -Let go modal and add init file to get information
 -Find all photos and loop it through
+
+Enable Selection Button on Click - jQuery
+-Use Ajax  , use javascript to communicate with the PHP/server, so we can bring the information  without refreshing the page
+-Use Ajax/Jquery -without refreshing the page without loosing the information
+-pull the id and name -send data to the server via ajax
+-Js/styles.js
+    $(document).ready(function() {
+
+        //Photo Library
+    });
