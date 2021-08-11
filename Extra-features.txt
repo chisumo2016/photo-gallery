@@ -63,8 +63,15 @@ Modifying / Improving Our AJAX PHP method
 Photo Library Sidebar Part #1 - CHALLENGE INCLUDED
 -responsible for displaying the information
 -we need the photo id in modal  data="<?php echo $photo->id;?>">
+-call modal_sidebar in modal
 
+Photo Library Sidebar Part #2 - SOLUTION INCLUDED
+-create a method to bring data from server
 
+Photo Library Sidebar Part #3 - COMPLETED
+-Display information from the server
+-display_sidebar_data() in photo class
+-concatinate the variables
 
 
 

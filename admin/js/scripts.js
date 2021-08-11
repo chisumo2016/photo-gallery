@@ -31,11 +31,11 @@ $(document).ready(function() {
         image_href_splitted = image_src.split("/");//array
         image_name =image_href_splitted[image_href_splitted.length - 1]; //get the value
 
-        $phot_id = $(this).attr("data");
+        $photo_id = $(this).attr("data");
 
         $.ajax({
             url: "includes/ajax_code.php",
-            data:{image_name: image_name, user_id:user_id },
+            data:{photo_id:photo_id},
             type:"POST",
             success:function (data) {
                 if (!data.error){
