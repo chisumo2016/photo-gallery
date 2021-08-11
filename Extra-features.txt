@@ -47,8 +47,9 @@ Writing the AJAX - Setting User Image
 -The first step was to get the information from user id and image id
 -To click Apply select
 
-
-
+Testing our AJAX Code
+- we need to write the ajax_code.php inside our admin include folder
+-catch the value via super global
 
 
 
