@@ -30,3 +30,9 @@ Enable Selection Button on Click - jQuery
 
         //Photo Library
     });
+
+Enabling the Selection Button with jQuery
+-Get some value and send to the server
+-Once you click the image the button has to be enabled
+-Target the pic with jquery
+

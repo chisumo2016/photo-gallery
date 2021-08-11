@@ -6,6 +6,11 @@ $(document).ready(function() {
     });
 
     //Photo Library
+
+    $(".modal_thumbnails").click(function () {
+        //Enable the button to true
+        $("#set_user_image").prop('disabled',false);
+    });
 });
 
 
