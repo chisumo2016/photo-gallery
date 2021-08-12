@@ -154,6 +154,12 @@ Edit Photo Page Sidebar jQuery Dropdown
 
 Login Page CSS
 -create a css in login page
+-Add in styles in admin css folder
+
+Confirm Delete with Javascript and jQuery
+-admin/js open
+-in photos.php
+-show the feedback to a user
 
 
 

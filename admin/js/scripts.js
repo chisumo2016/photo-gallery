@@ -76,6 +76,13 @@ $(document).ready(function() {
         $(".inside").slideToggle("fast");
         $("#toggle").toggleClass("glyphicon-menu-down glyphicon,glyphicon-menu-up glyphicon");
     });
+
+    /**Delete function **/
+    $(".delete_button").click(function () {
+
+        return confirm("Are you sure you want to delete this item");
+
+    });
     
 });
 

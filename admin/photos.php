@@ -55,9 +55,9 @@
                                                           src="<?php echo $photo->picture_path(); ?>"
                                                           alt="">
                                                   <div class="action_links">
-                                                      <a href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-danger">Delete</a>
-                                                      <a href="edit_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-warning">Edit</a>
-                                                      <a href="../photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-primary">View</a>
+                                                      <a href="delete_photo.php?id=<?php    echo $photo->id; ?>"   class="btn btn-xs btn-danger delete_button">Delete</a>
+                                                      <a href="edit_photo.php?id=<?php      echo $photo->id; ?>"    class="btn btn-xs btn-warning">Edit</a>
+                                                      <a href="../photo.php?id=<?php        echo $photo->id; ?>"    class="btn btn-xs btn-primary">View</a>
 
                                                   </div>
 
