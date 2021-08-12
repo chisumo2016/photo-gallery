@@ -92,3 +92,8 @@
     position: fixed !important;
 
 }
+
+/* Login */
+#login-id label{
+    color: #FFF;
+}

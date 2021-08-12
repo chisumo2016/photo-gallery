@@ -152,6 +152,9 @@ Edit Photo Page Sidebar jQuery Dropdown
 -let go to scripts
 -let use edit photo file
 
+Login Page CSS
+-create a css in login page
+
 
 
 
