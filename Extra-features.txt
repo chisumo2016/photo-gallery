@@ -146,8 +146,11 @@ Installing a Multiple Upload and Drop JS File Plugin Part #1
 
   Installing a Multiple Upload and Drop JS File Plugin Part #3 - COMPLETE
   We gonna make it work
+  -change the isset($_POST['file'])){  //change to file isset($_POST['submit'])
 
-
+Edit Photo Page Sidebar jQuery Dropdown
+-let go to scripts
+-let use edit photo file
 
 
 

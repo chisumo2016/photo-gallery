@@ -70,6 +70,13 @@ $(document).ready(function() {
     $('#summernote').summernote({
         height:300
     });
+
+    /**Edit photo**/
+    $(".info-box-header").click(function () {
+        $(".inside").slideToggle("fast");
+        $("#toggle").toggleClass("glyphicon-menu-down glyphicon,glyphicon-menu-up glyphicon");
+    });
+    
 });
 
 
